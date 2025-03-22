@@ -296,7 +296,6 @@ a:focus {
 
 .carousel .carousel-img::after {
     position: absolute;
-    content: "";
     top: 0;
     right: 0;
     bottom: 0;
@@ -309,6 +308,7 @@ a:focus {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    opacity: 20%;
 }
 
 .carousel .carousel-text {
@@ -501,7 +501,6 @@ a:focus {
 }
 
 .section-header h2::after {
-    content: "";
     position: absolute;
     width: 200px;
     height: 0;
@@ -596,7 +595,6 @@ a:focus {
 
 .about .about-img::after {
     position: absolute;
-    content: "";
     top: 60px;
     right: 60px;
     bottom: 60px;
@@ -713,7 +711,6 @@ a:focus {
 }
 
 .service .service-item a::after {
-    content: "";
     position: absolute;
     width: 80%;
     height: 2px;
@@ -753,7 +750,6 @@ a:focus {
 
 .feature .feature-img::after {
     position: absolute;
-    content: "";
     width: 100%;
     height: 70%;
     top: 30%;
@@ -826,6 +822,7 @@ a:focus {
     gap: 20px;
     margin: 40px;
 }
+
 .sectionn {
     background: white;
     padding: 20px;
@@ -833,6 +830,7 @@ a:focus {
     box-shadow: 0 0 10px rgba(120, 36, 36, 0.1);
     flex: 1;
 }
+
 .sectionn h2 {
     color: #190d49;
     margin-top: 0;
@@ -846,6 +844,7 @@ a:focus {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .contactt p {
     margin: 10px 0;
 }
@@ -976,7 +975,6 @@ a:focus {
 
 .testimonial .testimonial-item h2::before {
     position: absolute;
-    content: "";
     width: 30px;
     height: 2px;
     bottom: 0;
@@ -1033,7 +1031,6 @@ a:focus {
 .testimonial .owl-nav .owl-prev::after,
 .testimonial .owl-nav .owl-next::after {
     position: absolute;
-    content: "";
     width: 80px;
     height: 3px;
     top: 11px;
@@ -1161,7 +1158,6 @@ a:focus {
 
 .blog .blog-item a.btn::before {
     position: absolute;
-    content: "";
     width: 30px;
     height: 2px;
     top: 10px;
@@ -1205,7 +1201,6 @@ a:focus {
 .blog .owl-nav .owl-prev::after,
 .blog .owl-nav .owl-next::after {
     position: absolute;
-    content: "";
     width: 80px;
     height: 3px;
     top: 11px;
@@ -1281,7 +1276,7 @@ a:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(0, 0, 0, .1);
+    /* border: 1px solid rgba(0, 0, 0, .1); */
 }
 
 .contact .contact-icon i {
@@ -1435,7 +1430,6 @@ a:focus {
 .footer .footer-link h2::after,
 .footer .footer-newsletter h2::after {
     position: absolute;
-    content: "";
     width: 45px;
     height: 2px;
     bottom: 0;
