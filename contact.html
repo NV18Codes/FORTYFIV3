@@ -97,204 +97,99 @@
                                 <a href="single.html" class="dropdown-item">Single Page</a>
                             </div>
                         </div> -->
-                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Nav Bar End -->
-
-
- <!-- Contact Start -->
- <div class="contact mt-125">
+        
+            <!-- Contact Start -->
+<div class="contact mt-125">
     <div class="container">
-        <div class="section-header">
-            <p>Get In Touch</p>
+        <div class="section-header text-center">
             <h2>Get In Touch For Any Query</h2>
         </div>
-        <div class="row align-items-center">
-            <div class="col-md-4">
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        <i class="fa fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Our Head Office</h3>
-                        <p>Building 10, Thornhill Office Park, Johannesburg, South Africa.</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        <i class="fa fa-phone-alt"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Call for Help</h3>
-                        <p>+27 693570429</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-icon">
-                        <i class="fa fa-envelope"></i>
-                    </div>
-                    <div class="contact-text">
-                        <h3>Email for Information</h3>
-                        <p>contact@fortyfiv3.com</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="contact-form">
-                    <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name"
-                                required="required" data-validation-required-message="Please enter your name" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email"
-                                required="required" data-validation-required-message="Please enter your email" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="subject" placeholder="Subject"
-                                required="required" data-validation-required-message="Please enter a subject" />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <textarea class="form-control" id="message" placeholder="Message" required="required"
-                                data-validation-required-message="Please enter your message"></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div>
-                            <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-2">
-            <div class="map-container">
-                <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57279.465481048115!2d28.033581!3d-26.197765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1742373444930!5m2!1sen!2sus" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                        width="300" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="row">
 
-            <script>
-                document.getElementById("contactForm").addEventListener("submit", function (event) {
-                    event.preventDefault(); // Prevent the form from refreshing the page
 
-                    // Get form values
-                    let name = document.getElementById("name").value;
-                    let email = document.getElementById("email").value;
-                    let subject = document.getElementById("subject").value;
-                    let message = document.getElementById("message").value;
-
-                    // Construct mailto link
-                    let mailtoLink = `contact@fortyfiv3.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
-                    // Open email client
-                    window.location.href = mailtoLink;
-                });
-            </script>
-
-        </div>
-    </div>
-</div>
-<!-- Contact End -->
-
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo Section -->
-                <div class="col-lg-3">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="45 FINAL.png" alt="Logo" height="150" width="150">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Quick Links</h2>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About</a>
-                        <a href="service.html">Services</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                </div>
-
-                <!-- Business -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Business</h2>
-                        <a href="#">Projects</a>
-                        <a href="#">Our Team</a>
-                        <a href="#">Facts</a>
-                        <a href="#">Clients</a>
-                    </div>
-                </div>
-
-                <!-- Our Head Office -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Our Head Office</h2>
-
-                        <!-- Clickable Google Maps Link -->
-                        <p>
+            <!-- Contact Row (Aligned Bottom) -->
+            <div class="row align-items-stretch">
+                
+                <!-- Contact Information Column -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="contact-info">
+                        <div class="contact-icon">
                             <i class="fa fa-map-marker-alt"></i>
-                            <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
-                                rel="noopener noreferrer">
-                                Building 10, Thornhill Office Park, Johannesburg, South Africa.
-                            </a>
-                        </p>
-
-                        <!-- Clickable Phone Number -->
-                        <p>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Our Head Office</h3>
+                            <p>Building 10, Thornhill Office Park, Johannesburg, South Africa.</p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
                             <i class="fa fa-phone-alt"></i>
-                            <a href="tel:+27693570429">+27 693570429</a>
-                        </p>
-
-                        <!-- Clickable Email -->
-                        <p>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Call for Help</h3>
+                            <p><a href="tel:+27693570429">+27 693570429</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <div class="contact-icon">
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a>
-                        </p>
-
-                        <!-- Social Media Icons (Uncomment if needed) -->
-                        <!-- <div class="footer-social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-youtube"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div> -->
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email for Information</h3>
+                            <p><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="container copyright">
-            <div class="row">
-                <div class="col-12">
-                    <p class="text-center">
-                        &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
-                            rel="noopener noreferrer">FORTYFIV3</a>
-                    </p>
-
+                <!-- Contact Form Column -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <div class="contact-form">
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group mb-3">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" />
+                            </div>
+                            <div class="control-group mb-3">
+                                <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" />
+                            </div>
+                            <div class="control-group mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" />
+                            </div>
+                            <div class="control-group mb-3">
+                                <textarea class="form-control" id="message" placeholder="Message" required="required" rows="5"></textarea>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary" type="submit" id="sendMessageButton">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+
+                <!-- Google Map Column -->
+                <div class="col-md-4">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57279.465481048115!2d28.033581!3d-26.197765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1742373444930!5m2!1sen!2sus"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
+    <!-- Contact End -->
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
 
     <!-- Footer End -->
 
