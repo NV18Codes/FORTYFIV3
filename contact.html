@@ -147,33 +147,38 @@
                         </div>
                     </div>
 
-                    <!-- Contact Form Column -->
-                    <div class="col-md-4 mb-4 mb-md-0">
-                        <div class="contact-form">
-                            <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                <div class="control-group mb-3">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name"
-                                        required="required" />
-                                </div>
-                                <div class="control-group mb-3">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email"
-                                        required="required" />
-                                </div>
-                                <div class="control-group mb-3">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject"
-                                        required="required" />
-                                </div>
-                                <div class="control-group mb-3">
-                                    <textarea class="form-control" id="message" placeholder="Message"
-                                        required="required" rows="5"></textarea>
-                                </div>
-                                <div>
-                                    <button class="btn btn-primary" type="submit" id="sendMessageButton">Send
-                                        Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your Name" required />
+                        <input type="email" id="email" placeholder="Your Email" required />
+                        <input type="text" id="subject" placeholder="Subject" required />
+                        <textarea id="message" placeholder="Message" required rows="5"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", async function (event) {
+                            event.preventDefault();
+
+                            const name = document.getElementById("name").value;
+                            const email = document.getElementById("email").value;
+                            const subject = document.getElementById("subject").value;
+                            const message = document.getElementById("message").value;
+
+                            const response = await fetch("/api/sendEmail", {
+                                method: "POST",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ name, email, subject, message }),
+                            });
+
+                            if (response.ok) {
+                                alert("Message sent successfully!");
+                                document.getElementById("contactForm").reset();
+                            } else {
+                                alert("Failed to send message. Please try again.");
+                            }
+                        });
+                    </script>
+
 
                     <!-- Google Map Column -->
                     <div class="col-md-4">
