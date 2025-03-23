@@ -7,6 +7,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Consulting Website Template Free Download" name="keywords">
     <meta content="Consulting Website Template Free Download" name="description">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
 
     <!-- Favicon -->
     <link href="fortyfive.png" rel="icon">
@@ -147,39 +149,42 @@
                         </div>
                     </div>
 
+                    <!-- Contact Form Column -->
                     <form id="contactForm">
-                        <input type="text" id="name" placeholder="Your Name" required />
-                        <input type="email" id="email" placeholder="Your Email" required />
-                        <input type="text" id="subject" placeholder="Subject" required />
-                        <textarea id="message" placeholder="Message" required rows="5"></textarea>
-                        <button type="submit">Send Message</button>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                        <input type="email" id="email" placeholder="Your Email" required>
+                        <input type="text" id="subject" placeholder="Subject" required>
+                        <textarea id="message" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Email</button>
                     </form>
 
                     <script>
-                        document.getElementById("contactForm").addEventListener("submit", async function (event) {
-                            event.preventDefault();
+                        document.addEventListener("DOMContentLoaded", function () {
+                            emailjs.init("J1oECn39yhgpO5cOW");  // Replace with your EmailJS Public Key
 
-                            const name = document.getElementById("name").value;
-                            const email = document.getElementById("email").value;
-                            const subject = document.getElementById("subject").value;
-                            const message = document.getElementById("message").value;
+                            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                                event.preventDefault();
 
-                            const response = await fetch("/api/sendEmail", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({ name, email, subject, message }),
+                                let formData = {
+                                    name: document.getElementById("name").value,
+                                    email: document.getElementById("email").value,
+                                    subject: document.getElementById("subject").value,
+                                    message: document.getElementById("message").value
+                                };
+
+                                emailjs.send("service_yg5ecwf", "template_6rnhahb", formData)
+                                    .then((response) => {
+                                        alert("Email sent successfully!");
+                                        document.getElementById("contactForm").reset();
+                                    })
+                                    .catch((error) => {
+                                        console.error("Error sending email:", error);
+                                        alert("Failed to send email. Try again.");
+                                    });
                             });
-
-                            if (response.ok) {
-                                alert("Message sent successfully!");
-                                document.getElementById("contactForm").reset();
-                            } else {
-                                alert("Failed to send message. Please try again.");
-                            }
                         });
+
                     </script>
-
-
                     <!-- Google Map Column -->
                     <div class="col-md-4">
                         <div class="map-container">
