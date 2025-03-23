@@ -160,7 +160,7 @@
 
                     <script>
                         document.addEventListener("DOMContentLoaded", function () {
-                            emailjs.init("J1oECn39yhgpO5cOW");  // Replace with your EmailJS Public Key
+                            emailjs.init("J1oECn39yhgpO5cOW"); // Replace with your Public Key from EmailJS
 
                             document.getElementById("contactForm").addEventListener("submit", function (event) {
                                 event.preventDefault();
@@ -172,7 +172,7 @@
                                     message: document.getElementById("message").value
                                 };
 
-                                emailjs.send("service_yg5ecwf", "template_6rnhahb", formData)
+                                emailjs.send("service_yg5ecwf", "template_6rnhahb", formData, "J1oECn39yhgpO5cOW")
                                     .then((response) => {
                                         alert("Email sent successfully!");
                                         document.getElementById("contactForm").reset();
@@ -183,6 +183,7 @@
                                     });
                             });
                         });
+
 
                     </script>
                     <!-- Google Map Column -->
