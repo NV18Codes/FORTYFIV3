@@ -3,8 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FORTYFIV3 | Contact</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORTYFIV3 | About </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Consulting Website Template Free Download" name="keywords">
+    <meta content="Consulting Website Template Free Download" name="description">
+
+    <!-- Favicon -->
+    <link href="fortyfive.png" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
+        rel="stylesheet">
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -28,7 +37,17 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
+
 
 <body class="page">
     <!-- Navbar -->
@@ -53,7 +72,7 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="contact mt-5">
+    <div class="contact mt-125">
         <div class="container">
             <div class="section-header text-center">
                 <h2>Get In Touch</h2>
@@ -103,6 +122,10 @@
                         <button type="submit" class="btn btn-primary btn-block">Send Email</button>
                     </form>
                 </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742797462960!5m2!1sen!2sin"
+                    width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -148,9 +171,137 @@
         });
     </script>
 
-    <!-- Bootstrap Scripts -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- Footer Start -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Logo Section -->
+                <div class="col-lg-3">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="45 FINAL.png" alt="Logo" height="150" width="150">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3">
+                    <div class="footer-link">
+                        <h2>Quick Links</h2>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About Us</a>
+                        <a href="service.html">Services</a>
+                        <a href="contact.html">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Business -->
+                <div class="col-lg-3">
+                    <div class="footer-link">
+                        <h2>Business</h2>
+                        <a href="#">Projects</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Facts</a>
+                        <a href="#Clients" class="scroll-link">Clients</a>
+                    </div>
+                </div>
+                <!-- Our Head Office -->
+                <div class="col-lg-3">
+                    <div class="footer-link">
+                        <h2>Our Office</h2>
+
+                        <div class="footer-item">
+                            <i class="fa fa-map-marker-alt"></i>
+                            <span>
+                                <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Building 10, Thornhill Office Park, Johannesburg, South Africa
+                                </a>
+                            </span>
+                        </div>
+
+                        <div class="footer-item">
+                            <i class="fa fa-phone-alt"></i>
+                            <span><a href="tel:+27693570429">+27 693570429</a></span>
+                        </div>
+
+                        <div class="footer-item">
+                            <i class="fa fa-envelope"></i>
+                            <span><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <style>
+                    .footer-link {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                    }
+
+                    .footer-item {
+                        display: flex;
+                        align-items: flex-start;
+                        /* Align items to the top */
+                        gap: 12px;
+                    }
+
+                    .footer-item i {
+                        font-size: 20px;
+                        color: #00aaff;
+                        width: 20px;
+                        /* Ensure equal width for all icons */
+                        text-align: left;
+                        /* Align text to the left */
+                        margin-top: 3px;
+                        /* Adjust vertical alignment */
+                    }
+
+                    .footer-item a {
+                        font-size: 16px;
+                        color: #ffffff;
+                        text-decoration: none;
+                        transition: color 0.3s ease-in-out;
+                        display: inline-block;
+                        max-width: 250px;
+                        /* Prevents text from stretching too wide */
+                    }
+
+                    .footer-item a:hover {
+                        color: #00ff99;
+                    }
+
+                    /* Responsive for Mobile */
+                    @media (max-width: 768px) {
+                        .footer-item {
+                            flex-direction: row;
+                            align-items: center;
+                            font-size: 14px;
+                        }
+
+                        .footer-item i {
+                            font-size: 18px;
+                            width: 18px;
+                        }
+                    }
+                </style>
+
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-center">
+                                &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
+                                    rel="noopener noreferrer">FORTYFIV3</a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap Scripts -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
