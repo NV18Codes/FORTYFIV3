@@ -106,9 +106,10 @@
     <div class="service mt-125">
         <div class="container">
             <div class="section-header">
-                <h2 class="mb-2">Consulting Services</h2>
-                <p style="text-indent: 5ch;">Empowering businesses with cutting-edge solutions</p>
-                <p style="text-indent: 5ch;">Bridging the gap between technology and strategy for sustainable growth</p>
+                <h2 class="mb-2"> Services</h2>
+                <p style="text-indent: 5ch;">Empowering businesses with cutting-edge solutions.</p>
+                <p style="text-indent: 5ch;">Bridging the gap between technology and strategy for sustainable growth.
+                </p>
             </div>
             <h1 class="text-center">HOW CAN WE HELP YOU?</h1>
             <p class="text-center">Let us know your business challenges, goals, or transformation needs</p><br>
@@ -172,20 +173,22 @@
     <div class="testimonial">
         <div class="container">
             <div class="section-header">
-                <h1 class="text-center">TESTIMONIAL CAROUSEL</h1><br>
-                <!-- <h2>100% Positive Customer Reviews</h2> -->
+                <h1 class="text-center">TESTIMONIALS</h1><br>
             </div>
-            <div class="owl-carousel testimonials-carousel">
+
+            <div class="testimonial-list">
+                <!-- First Testimonial -->
                 <div class="testimonial-item">
-                    <!-- <img src="img/testimonial-1.jpg" alt="Image"> -->
                     <p>
                         "FORTYFIV3 is a valued service provider for SHAKA INDUSTRIES, and their experience in AI/ML,
                         Custom App Development is exceptional."
                     </p>
                     <h2>Peggy Pillay</h2>
                     <h3>Director</h3>
-                    <h4>⭐⭐⭐⭐⭐</h4>
+                    <div class="rating">★★★★★</div>
                 </div>
+
+                <!-- Second Testimonial -->
                 <div class="testimonial-item">
                     <p>
                         "FORTYFIV3’s quality of service, reliability, expertise, and knowledge of cloud-based solutions
@@ -193,11 +196,94 @@
                     </p>
                     <h2>Hannes Gouws</h2>
                     <h3>Director</h3>
-                    <h4>⭐⭐⭐⭐⭐</h4>
+                    <div class="rating">★★★★★</div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Elegant CSS for testimonials -->
+    <style>
+        /* Overall container styling */
+        .testimonial {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 60px 20px;
+        }
+
+        .section-header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #222;
+            text-transform: uppercase;
+        }
+
+        /* Testimonial list layout */
+        .testimonial-list {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Individual testimonial card */
+        .testimonial-item {
+            max-width: 450px;
+            width: 100%;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            background: #ffffff;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        /* Hover effect for a dynamic feel */
+        .testimonial-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Testimonial text */
+        .testimonial-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Name styling */
+        .testimonial-item h2 {
+            margin-top: 15px;
+            font-size: 22px;
+            color: #003366;
+            font-weight: bold;
+        }
+
+        /* Designation */
+        .testimonial-item h3 {
+            font-size: 16px;
+            color: #777;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        /* Star Rating */
+        .rating {
+            font-size: 22px;
+            color: #f4c430;
+            letter-spacing: 2px;
+        }
+
+        /* Responsive for mobile screens */
+        @media (max-width: 768px) {
+            .testimonial-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+
+
     <!--Testimonial End -->
 
     <!-- <div class="work">
@@ -284,8 +370,10 @@
             <h2>Want to Start Your Next Project?</h2>
             <p>We are here to help! Contact our experts today and let's build something amazing together.</p>
         </div>
-        <a href="tel:+27693570429" class="cta-button">📞 +27 693570429</a>
+        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
+        </a>
     </div>
+    <!-- CTA Section End -->
 
     </div>
     </div>
@@ -328,27 +416,28 @@
                     </div>
                 </div>
                 <!-- Our Head Office -->
-                <!-- Our Head Office -->
                 <div class="col-lg-3">
                     <div class="footer-link">
                         <h2>Our Office</h2>
 
                         <div class="footer-item">
                             <i class="fa fa-map-marker-alt"></i>
-                            <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
-                                rel="noopener noreferrer">
-                                Building 10, Thornhill Office Park, Johannesburg, South Africa
-                            </a>
+                            <span>
+                                <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Building 10, Thornhill Office Park, Johannesburg, South Africa
+                                </a>
+                            </span>
                         </div>
 
                         <div class="footer-item">
                             <i class="fa fa-phone-alt"></i>
-                            <a href="tel:+27693570429">+27 693570429</a>
+                            <span><a href="tel:+27693570429">+27 693570429</a></span>
                         </div>
 
                         <div class="footer-item">
                             <i class="fa fa-envelope"></i>
-                            <a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a>
+                            <span><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></span>
                         </div>
                     </div>
                 </div>
@@ -358,21 +447,24 @@
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
-                        /* Spacing between each item */
                     }
 
                     .footer-item {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
+                        /* Align items to the top */
                         gap: 12px;
-                        /* Adjust space between icon and text */
                     }
 
                     .footer-item i {
                         font-size: 20px;
-                        /* Slightly bigger for better visibility */
                         color: #00aaff;
-                        /* Eye-catching color */
+                        width: 20px;
+                        /* Ensure equal width for all icons */
+                        text-align: left;
+                        /* Align text to the left */
+                        margin-top: 3px;
+                        /* Adjust vertical alignment */
                     }
 
                     .footer-item a {
@@ -380,11 +472,13 @@
                         color: #ffffff;
                         text-decoration: none;
                         transition: color 0.3s ease-in-out;
+                        display: inline-block;
+                        max-width: 250px;
+                        /* Prevents text from stretching too wide */
                     }
 
                     .footer-item a:hover {
                         color: #00ff99;
-                        /* Hover effect with a fresh touch */
                     }
 
                     /* Responsive for Mobile */
@@ -397,25 +491,24 @@
 
                         .footer-item i {
                             font-size: 18px;
+                            width: 18px;
                         }
                     }
                 </style>
-            </div>
 
-            <div class="container copyright">
-                <div class="row">
-                    <div class="col-12">
-                        <p class="text-center">
-                            &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
-                                rel="noopener noreferrer">FORTYFIV3</a>
-                        </p>
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="text-center">
+                                &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
+                                    rel="noopener noreferrer">FORTYFIV3</a>
+                            </p>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Footer End -->
 
         <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
