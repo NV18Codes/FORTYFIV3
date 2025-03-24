@@ -143,31 +143,128 @@
     </div>
     <!-- About End -->
 
-    <!-- who are we start-->
-    <div class="containerr">
-        <div class="sectionn">
-            <h2>Who Are We</h2>
-            <p>We are a winning team, capable of handling a wide variety of software development projects and solving
-                business problems.</p>
-        </div>
-        <div class="sectionn">
-            <h2>Our Mission</h2>
-            <p>Creating a culture that fosters an environment where creativity and problem-solving thrive, empowering
-                our teams to challenge limits and consistently deliver extraordinary outcomes.</p>
-        </div>
-        <div class="sectionn">
-            <h2>What We Do</h2>
-            <ul>
-                <li>Digital Transformation</li>
-                <li>Custom Development</li>
-                <li>Strategy & Consulting</li>
-                <li>eCommerce Development</li>
-                <li>Testing Services</li>
-                <li>Tech Support</li>
-            </ul>
+    <!-- Our Values Section Start -->
+    <div class="values-container">
+        <h2 class="section-title">OUR VALUES</h2>
+        <div class="values-content">
+            <div class="value-box">
+                <h3>🚀 Mission</h3>
+                <p>Empowering businesses with innovative technology solutions.</p>
+            </div>
+            <div class="value-box">
+                <h3>🌍 Vision</h3>
+                <p>To be the leading IT partner driving digital transformation worldwide.</p>
+            </div>
         </div>
     </div>
-    <!-- who are we end -->
+    <!-- Our Values Section End -->
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Section Container */
+        .values-container {
+            background: linear-gradient(135deg, #E3EAF3, #FFFFFF);
+            padding: 60px 20px;
+            text-align: center;
+            color: #222;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeIn 1s ease-out forwards;
+            border-radius: 10px;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            color: #004080;
+            /* Dark blue for visibility */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Content Box Styling */
+        .values-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        /* Individual Value Box */
+        .value-box {
+            background: #ffffff;
+            border: 2px solid #004080;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: scale(0.9);
+            animation: fadeInScale 0.8s ease-out forwards 0.3s;
+        }
+
+        /* Hover Effect */
+        .value-box:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Heading Styling */
+        .value-box h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #004080;
+        }
+
+        /* Paragraph Styling */
+        .value-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .values-content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .value-box {
+                width: 90%;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
 
     <!-- Feature Start -->
     <div class="feature">
@@ -224,83 +321,157 @@
     <!-- Feature End -->
 
 
-    <!-- 6d Start -->
-    <div class="team">
+    <!-- 6D Process Start -->
+    <div class="process-section py-5 bg-light">
         <div class="container">
-            <div class="section-header">
-                <h2>Our 6-D Process</h2>
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-uppercase">Our <span style="color:#00aaff;">6-D</span> Process</h2>
+                <p class="text-muted">A structured approach to problem-solving and innovation</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/discover.png" alt="6d Image" style="height: 25em;">
+            <div class="row g-4">
+                <!-- Process Items -->
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://plus.unsplash.com/premium_photo-1720032305135-a87c5e0888b6?w=600&h=600&auto=format&fit=crop&q=80"
+                                alt="Discover" class="img-fluid">
                         </div>
-                        <div class="team-text">
-                            <h2>Discover</h2>
-                            <p>Identify the problem, need or opportunity</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/define.jpg" alt="Team Image" style="height: 25em;">
-                        </div>
-                        <div class="team-text">
-                            <h2>Define</h2>
-                            <p>Refine the user needs statement</p>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>iscover</h4>
+                        <p class="text-muted">Identify the problem, need, or opportunity.</p>
+                        <div class="hover-overlay">
+                            <p>Uncover insights through research and analysis.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/design.png" alt="Team Image" style="height: 25em;">
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://images.unsplash.com/photo-1669023414171-56f0740e34cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDd8fGRlbGl2ZXIlMjBzb2Z0d2FyZXxlbnwwfHwwfHx8MA%3D%3D"
+                                alt="Define" class="img-fluid">
                         </div>
-                        <div class="team-text">
-                            <h2>Design</h2>
-                            <p>Design the solution, validate the concept</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/develop.png" alt="Team Image" style="height: 25em;">
-                        </div>
-                        <div class="team-text" style="padding:10px;">
-                            <h2>Develop</h2>
-                            <p>Build the right product, using fit for purpose – agile, waterfall, or hybrid </p>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>efine</h4>
+                        <p class="text-muted">Refine the user needs statement.</p>
+                        <div class="hover-overlay">
+                            <p>Create a structured problem statement for clarity.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/deploy.png" alt="Team Image" style="height: 25em;">
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://plus.unsplash.com/premium_photo-1720192861974-26432a488f60?w=600&h=600&auto=format&fit=crop&q=80"
+                                alt="Design" class="img-fluid">
                         </div>
-                        <div class="team-text">
-                            <h2>Deploy</h2>
-                            <p>Go live / Launch the product</p>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>esign</h4>
+                        <p class="text-muted">Develop innovative solutions.</p>
+                        <div class="hover-overlay">
+                            <p>Enhance user experience with creative strategies.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-item">
-                        <div class="team-img">
-                            <img src="img/deliver.png" alt="Team Image" style="height: 25em;">
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://static.vecteezy.com/system/resources/previews/000/272/444/original/coding-programming-application-development-flat-vector-illustration-design.jpg"
+                                alt="Develop" class="img-fluid">
                         </div>
-                        <div class="team-text" style="padding:10px;">
-                            <h2>Deliver</h2>
-                            <p>Evaluate customer value and collect feedback</p>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>evelop</h4>
+                        <p class="text-muted">Build the right product using agile or waterfall approaches.</p>
+                        <div class="hover-overlay">
+                            <p>Iterate and optimize for efficiency.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://www.devteam.space/wp-content/uploads/2022/06/Software-Deployment-Tools.jpg"
+                                alt="Deploy" class="img-fluid">
+                        </div>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>eploy</h4>
+                        <p class="text-muted">Go live and launch the product successfully.</p>
+                        <div class="hover-overlay">
+                            <p>Ensure seamless integration and performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="process-item text-center p-4 rounded bg-white position-relative">
+                        <div class="process-icon mx-auto mb-3">
+                            <img src="https://plus.unsplash.com/premium_photo-1683984171269-04c84ee23234?q=80&w=600&h=600&auto=format&fit=crop"
+                                alt="Deliver" class="img-fluid">
+                        </div>
+                        <h4 class="fw-semibold"><span style="color:#00aaff;">D</span>eliver</h4>
+                        <p class="text-muted">Evaluate customer value and collect feedback.</p>
+                        <div class="hover-overlay">
+                            <p>Continuously improve based on insights.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 6d End -->
+    <!-- 6D Process End -->
+
+    <style>
+        /* General Styling */
+        .process-item {
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border: 1px solid #dee2e6;
+            overflow: hidden;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .process-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Image Styling */
+        .process-icon img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid transparent;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+        }
+
+        .process-item:hover .process-icon img {
+            transform: scale(1.1);
+            border: 6px solid #00aaff;
+        }
+
+        /* Hover Effect Overlay */
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 170, 255, 0.75);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        .process-item:hover .hover-overlay {
+            opacity: 1;
+        }
+    </style>
+
+
 
     <!-- CTA Section Start -->
     <style>
