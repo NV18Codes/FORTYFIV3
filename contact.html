@@ -27,6 +27,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -145,12 +146,13 @@
         <h1 style="color: #20b7c2;">Contact Us</h1>
 
         <p>
-            Please fill in the form below 
+            Please fill in the form below
             <a href="#contactForm" class="scroll-link">
-                <i class="fa-solid fa-arrow-down-long fa-bounce" style="font-size: 24px; color: #ffffff; margin-left: 8px;"></i>
+                <i class="fa-solid fa-arrow-down-long fa-bounce"
+                    style="font-size: 24px; color: #ffffff; margin-left: 8px;"></i>
             </a>.
             <br>Our representative will contact you shortly.
-        </p>           
+        </p>
     </div>
 
 
@@ -227,7 +229,14 @@
                         <textarea id="message" class="form-control" rows="4" placeholder="Your Message"
                             required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    <div class="d-flex align-items-center">
+                        <button type="submit" class="btn btn-primary" style="width: auto; padding: 10px 20px;">
+                            Submit
+                        </button>
+                        <div class="ml-3">
+                            <div class="g-recaptcha" data-sitekey="6Lc2z_8qAAAAAOMK63a5p7--v-oG9X8XFp3T60EF"></div>
+                        </div>
+                    </div><br>
                 </form>
             </div><br>
             <iframe
@@ -236,35 +245,40 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-
-    <!-- EmailJS Script -->
     <script>
+        (function () {
+            emailjs.init("J1oECn39yhgpO5cOW"); // Replace with your actual EmailJS User ID
+        })();
+
         document.getElementById("contactForm").addEventListener("submit", async function (event) {
             event.preventDefault();
 
-            let formData = {
-                from_name: document.getElementById("firstName").value + " " + document.getElementById("lastName").value,
+            // Validate reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if (!recaptchaResponse) {
+                alert("Please complete the reCAPTCHA verification.");
+                return;
+            }
+
+            // Collect form data
+            const formData = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
                 role: document.getElementById("role").value,
                 company: document.getElementById("company").value,
-                from_email: document.getElementById("email").value,
+                email: document.getElementById("email").value,
+                contact: document.getElementById("contact").value,
                 message: document.getElementById("message").value
             };
 
             try {
-                await emailjs.send("service_yg5ecwf", "template_6rnhahb", {
-                    from_name: formData.from_name,
-                    role: formData.role,
-                    company: formData.company,
-                    from_email: formData.from_email,
-                    message: formData.message,
-                    to_email: "samuelgamercoc20@gmail.com"
-                });
-
-                alert("Your message has been sent! You will receive an email shortly.");
+                const response = await emailjs.send("service_yg5ecwf", "template_v88kuf5", formData);
+                alert("Message sent successfully!");
                 document.getElementById("contactForm").reset();
+                grecaptcha.reset();
             } catch (error) {
-                console.error("Error sending email:", error);
-                alert("Failed to send email. Please try again later.");
+                console.error("EmailJS Error:", error);
+                alert("Failed to send message. Please try again later.");
             }
         });
     </script>
@@ -385,12 +399,13 @@
 
                 <div class="container copyright">
                     <div class="row">
-                        <div class="col-12">
-                            <p class="text-center">
-                                &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
-                                    rel="noopener noreferrer">FORTYFIV3</a>
+                        <div class="col-12 d-flex justify-content-center align-items-center flex-wrap">
+                            <p class="m-0 text-center">
+                                &copy; Copyright 2025 | Powered by
+                                <a href="index.html" target="_blank" rel="noopener noreferrer">FORTYFIV3</a> |
+                                <a href="Privacy Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy
+                                    Policy</a>
                             </p>
-
                         </div>
                     </div>
                 </div>
