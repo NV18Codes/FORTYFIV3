@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="utf-8">
-    <title>FORTYFIV3 | About </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Consulting Website Template Free Download" name="keywords">
-    <meta content="Consulting Website Template Free Download" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORTYFIV3 | Contact</title>
+
+    <meta name="keywords" content="Consulting Website Template Free Download">
+    <meta name="description" content="Consulting Website Template Free Download">
 
     <!-- Favicon -->
     <link href="fortyfive.png" rel="icon">
@@ -14,29 +15,6 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
         rel="stylesheet">
-
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            emailjs.init("J1oECn39yhgpO5cOW"); // 🔹 Initialize EmailJS with your public key
-        });
-    </script>
-
-    <!-- Favicon -->
-    <link href="fortyfive.png" rel="icon">
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@200;300;400&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS Libraries -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
 
     <!-- CSS Libraries -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -44,24 +22,115 @@
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Template Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("J1oECn39yhgpO5cOW"); // Initialize EmailJS
+        });
+    </script>
+
+    <style>
+        .contact-header {
+            background: url('image.png') no-repeat center center;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+            /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            /* Dark Blue */
+            font-size: 2rem;
+            font-weight: bold;
+            padding: 50px 10% 50px 10%;
+            margin-top: 130px;
+        }
+
+        /* Heading Styling */
+        .contact-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        /* Text Styling */
+        .contact-header p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            max-width: 60%;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .contact-header {
+                padding: 40px 8%;
+            }
+
+            .contact-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-header p {
+                font-size: 1.3rem;
+                max-width: 70%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-header {
+                text-align: center;
+                align-items: center;
+                padding: 30px 5%;
+            }
+
+            .contact-header h1 {
+                font-size: 2.2rem;
+                color: #ffffff;
+            }
+
+            .contact-header p {
+                font-size: 1.2rem;
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-header p {
+                font-size: 1rem;
+                max-width: 90%;
+            }
+        }
+    </style>
 </head>
 
-
 <body class="page">
+
     <!-- Navbar -->
-    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            <img src="45 FINAL.png" alt="Logo" height="50" width="50" class="logo">
-            <a href="index.html" class="navbar-brand brand-text">
-                <!-- <h4 style="color: white; font-style: italic;">FORTYFIV3</h4> -->
+            <a href="index.html" class="navbar-brand">
+                <img src="45 FINAL.png" alt="Logo" height="50" width="50">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <div class="navbar-nav">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
@@ -69,65 +138,102 @@
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="contact-header">
+        <h1 style="color: #20b7c2;">Contact Us</h1>
+
+        <p>
+            Please fill in the form below 
+            <a href="#contactForm" class="scroll-link">
+                <i class="fa-solid fa-arrow-down-long fa-bounce" style="font-size: 24px; color: #ffffff; margin-left: 8px;"></i>
+            </a>.
+            <br>Our representative will contact you shortly.
+        </p>           
     </div>
 
+
     <!-- Contact Section -->
-    <div class="contact mt-125">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Get In Touch</h2>
-            </div>
-            <div class="row">
-                <!-- Contact Info -->
-                <div class="col-md-4">
-                    <div class="contact-info">
-                        <div class="contact-icon"><i class="fa fa-map-marker-alt"></i></div>
-                        <div class="contact-text">
-                            <h3>Our Office</h3>
-                            <p>Building 10, Thornhill Office Park, Johannesburg, South Africa.</p>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-icon"><i class="fa fa-phone-alt"></i></div>
-                        <div class="contact-text">
-                            <h3>Call for Help</h3>
-                            <p><a href="tel:+27693570429">+27 693570429</a></p>
-                        </div>
-                    </div>
-                    <div class="contact-info">
-                        <div class="contact-icon"><i class="fa fa-envelope"></i></div>
-                        <div class="contact-text">
-                            <h3>Email for Information</h3>
-                            <p><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></p>
-                        </div>
+    <section class="contact mt-5">
+        <div class="container text-center">
+            <!-- <div class="contact-content">
+                <div class="section-header">
+                    <p>Get in touch</p>
+                    <h2>Please fill in the form below.<br>Our representative will contact you shortly.</h2>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Contact Details & Form -->
+    <div class="container mt-4">
+        <div class="row">
+
+            <!-- Contact Info -->
+            <div class="col-md-4">
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa fa-map-marker-alt"></i></div>
+                    <div class="contact-text">
+                        <h3>Our Office</h3>
+                        <p>Building 10, Thornhill Office Park, Johannesburg, South Africa.</p>
                     </div>
                 </div>
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa fa-phone-alt"></i></div>
+                    <div class="contact-text">
+                        <h3>Call for Help</h3>
+                        <p><a href="tel:+27693570429">+27 693570429</a></p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <h3>Email for Information</h3>
+                        <p><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></p>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Contact Form -->
-                <div class="col-md-8">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+            <!-- Contact Form -->
+            <!-- Contact Form -->
+            <div class="col-md-8">
+                <form id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" id="firstName" class="form-control" placeholder="First Name" required>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group col-md-6">
+                            <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text" id="role" class="form-control" placeholder="Your Role" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" id="company" class="form-control" placeholder="Company Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
                             <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                         </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                        <div class="form-group col-md-6">
+                            <input type="tel" id="contact" class="form-control" placeholder="Your Contact" required>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" class="form-control" rows="4" placeholder="Your Message"
-                                required></textarea>
-                        </div>
-                        <!-- <button type="submit" class="btn btn-primary btn-block">Submit</button> -->
-                        <button type="submit" class="btn btn-primary btn-block" style="width: 100px; height: 40px; justify-content: center; font-size: 14px; display: flex">Submit</button>
-                    </form>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742797462960!5m2!1sen!2sin"
-                    width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class="form-control" rows="4" placeholder="Your Message"
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </form>
+            </div><br>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742919712242!5m2!1sen!2sin"
+                width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -137,30 +243,21 @@
             event.preventDefault();
 
             let formData = {
-                from_name: document.getElementById("name").value, // User's name
-                from_email: document.getElementById("email").value, // User's email (recipient of auto-reply)
-                subject: document.getElementById("subject").value,
+                from_name: document.getElementById("firstName").value + " " + document.getElementById("lastName").value,
+                role: document.getElementById("role").value,
+                company: document.getElementById("company").value,
+                from_email: document.getElementById("email").value,
                 message: document.getElementById("message").value
             };
 
-            console.log("User Email (to_email) ->", formData.from_email); // 🔥 DEBUG LINE
-
             try {
-                // 🔹 Step 1: Send email to yourself
                 await emailjs.send("service_yg5ecwf", "template_6rnhahb", {
                     from_name: formData.from_name,
+                    role: formData.role,
+                    company: formData.company,
                     from_email: formData.from_email,
-                    subject: formData.subject,
                     message: formData.message,
                     to_email: "samuelgamercoc20@gmail.com"
-                });
-
-                // 🔹 Step 2: Send auto-reply to the user
-                await emailjs.send("service_yg5ecwf", "template_v88kuf5", {
-                    to_email: formData.from_email, // Make sure this is correct
-                    reply_name: formData.from_name,
-                    reply_message: formData.message,
-                    time: new Date().toLocaleString()
                 });
 
                 alert("Your message has been sent! You will receive an email shortly.");
@@ -171,7 +268,6 @@
             }
         });
     </script>
-
     <!-- Footer Start -->
     <div class="footer">
         <div class="container">
@@ -300,9 +396,6 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap Scripts -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
