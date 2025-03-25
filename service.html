@@ -105,12 +105,50 @@
     <!-- Nav Bar End -->
     <div class="service mt-125">
         <div class="container">
-            <div class="section-header">
-                <h2 class="mb-2"> Services</h2>
-                <p style="text-indent: 5ch;">Empowering businesses with cutting-edge solutions.</p>
-                <p style="text-indent: 5ch;">Bridging the gap between technology and strategy for sustainable growth.
+            <div class="section-head">
+                <h2 class="mb-2" style="color: white;"> Services</h2>
+                <p style="text-indent: 5ch;">Empowering businesses with cutting-edge solutions.
+                <br>Bridging the gap between technology and strategy for sustainable growth.
                 </p>
             </div>
+            <style>
+            
+            .section-head {
+                background-image: url('img/service1.jpg'); /* Replace with correct path */
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                width: auto;
+                min-height: 100vh; /* Full screen height */
+                display: flex;
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center horizontally */
+                justify-content: center; /* Center vertically */
+                text-align: center;
+                color: rgb(253, 250, 250); /* Ensure text is readable */
+                padding: 0px;
+                position: relative;
+            }
+
+            .section-head::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                
+            }
+
+            .section-head div {
+                position: relative;
+                z-index: 2; /* Ensure text appears above background */
+            }
+
+            h2 {
+                margin-bottom: 10px; /* Space between heading and paragraph */
+            }
+            </style>
             <h1 class="text-center">HOW CAN WE HELP YOU?</h1>
             <p class="text-center">Let us know your business challenges, goals, or transformation needs</p><br>
             <div class="row">
