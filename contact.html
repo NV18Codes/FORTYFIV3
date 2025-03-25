@@ -74,9 +74,61 @@
     <!-- Contact Section -->
     <div class="contact mt-125">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="section-head">
                 <h2>Get In Touch</h2>
+                <p>Please fill in the form below. Our representative will contact you shortly.</p>
             </div>
+            <style>
+            .section-head {
+    background-image: url('img/contact.jpg'); /* Ensure correct path */
+    background-size: cover; /* Ensures full coverage without distortion */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw; /* Full viewport width */
+    height: 70vh; /* Reduce height while keeping full width */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align text to the left */
+    justify-content: flex-start; /* Align content to top */
+    text-align: left;
+    padding: 20px; /* Add padding for spacing */
+    position: relative;
+}
+
+/* Adding an overlay for opacity effect */
+.section-head::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+}
+
+/* Styling for "Get In Touch" text */
+.section-head h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 28px; /* Larger size for heading */
+    font-weight: bold;
+    color: white !important; /* Ensure white color */
+    margin-bottom: 10px; /* Add space below heading */
+    display: block;
+}
+
+/* Styling for the paragraph */
+.section-head p {
+    position: relative;
+    z-index: 2;
+    font-size: 18px; /* Smaller font size than heading */
+    color: white; /* Ensure white color */
+    margin: 0; /* Remove default margin */
+    display: block; /* Ensure paragraph appears on a new line */
+}
+
+            </style>
             <div class="row">
                 <!-- Contact Info -->
                 <div class="col-md-4">
@@ -99,100 +151,48 @@
                         <div class="contact-text">
                             <h3>Email for Information</h3>
                             <p><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></p>
+                            
                         </div>
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="col-md-8">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" class="form-control" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" class="form-control" rows="4" placeholder="Your Message"
-                                required></textarea>
-                        </div>
-                        <!-- <button type="submit" class="btn btn-primary btn-block">Submit</button> -->
-                        <button type="submit" class="btn btn-primary btn-block" style="width: 100px; height: 40px; justify-content: center; font-size: 14px; display: flex">Submit</button>
-                    </form>
-                </div>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742797462960!5m2!1sen!2sin"
-                    width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="col-md-8">
+    <form id="contactForm">
+        <!-- First Name & Last Name in the same row -->
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="first-name" class="form-control" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="last-name" class="form-control" placeholder="Last Name" required>
             </div>
         </div>
-    </div>
 
-    <!-- EmailJS Script -->
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", async function (event) {
-            event.preventDefault();
+        <!-- Role & Company in the same row -->
+        <div class="form-row">
+            <div class="form-group">
+                <input type="text" id="role" class="form-control" placeholder="Role" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="company" class="form-control" placeholder="Company" required>
+            </div>
+        </div>
 
-            let formData = {
-                from_name: document.getElementById("name").value, // User's name
-                from_email: document.getElementById("email").value, // User's email (recipient of auto-reply)
-                subject: document.getElementById("subject").value,
-                message: document.getElementById("message").value
-            };
+        <!-- Email (Full width) -->
+        <div class="form-group">
+            <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+        </div>
 
-            console.log("User Email (to_email) ->", formData.from_email); // 🔥 DEBUG LINE
+        <!-- Message Box (Full width) -->
+        <div class="form-group">
+            <textarea id="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
 
-            try {
-                // 🔹 Step 1: Send email to yourself
-                await emailjs.send("service_yg5ecwf", "template_6rnhahb", {
-                    from_name: formData.from_name,
-                    from_email: formData.from_email,
-                    subject: formData.subject,
-                    message: formData.message,
-                    to_email: "samuelgamercoc20@gmail.com"
-                });
-
-                // 🔹 Step 2: Send auto-reply to the user
-                await emailjs.send("service_yg5ecwf", "template_v88kuf5", {
-                    to_email: formData.from_email, // Make sure this is correct
-                    reply_name: formData.from_name,
-                    reply_message: formData.message,
-                    time: new Date().toLocaleString()
-                });
-
-                alert("Your message has been sent! You will receive an email shortly.");
-                document.getElementById("contactForm").reset();
-            } catch (error) {
-                console.error("Error sending email:", error);
-                alert("Failed to send email. Please try again later.");
-            }
-        });
-    </script>
-
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo Section -->
-                <div class="col-lg-3">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="45 FINAL.png" alt="Logo" height="150" width="150">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Quick Links -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Quick Links</h2>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="service.html">Services</a>
-                        <a href="contact.html">Contact Us</a>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary btn-block" style="width: 100px; height: 40px; justify-content: center; font-size: 14px; display: flex">Submit</button>
+    </form>
+</div><a href="contact.html">Contact Us</a>
                     </div>
                 </div>
 
