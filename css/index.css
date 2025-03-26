@@ -36,7 +36,7 @@
 
 /* Restrict styles to .fact section only */
 .fact {
-    padding: 50px 0;
+    /* padding: 50px 0; */
     text-align: center;
     background-color: #f9f9f9;
 }
@@ -45,7 +45,7 @@
 .fact .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 /* Ensuring all cards stay in one row */
@@ -130,7 +130,7 @@
 
 /* About Section Styling */
 .about {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     background: #f9f9f9;
 }
 
@@ -166,6 +166,7 @@
     text-align: center;
     overflow: hidden;
     border-radius: 10px;
+
 }
 
 .about-img img {
@@ -173,6 +174,7 @@
     max-width: 500px;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
+    box-shadow: darkblue;
 }
 
 .about-img img:hover {
@@ -262,10 +264,39 @@
     padding: 50px 0;
 }
 
-.feature-img img {
-    max-width: 100%;
-    animation: fadeInLeft 1s ease-in-out;
+.feature-img {
+    position: relative;
+    display: inline-block;
 }
+
+.feature-img img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    display: block;
+}
+
+/* Noon Sun Shadow Effect */
+.feature-img::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -12px;
+    /* Adjusts the shadow position */
+    width: 90%;
+    /* Slightly smaller than the image */
+    height: 10px;
+    /* Flat shadow effect */
+    background: rgb(4, 6, 72);
+    /* Dark gray shadow */
+    /* filter: blur(1px); */
+    /* Soft blur for realism */
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
 
 .feature-content {
     padding: 20px;
@@ -515,3 +546,54 @@
     }
 }
 
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+    gap: 12px;
+}
+
+.footer-item i {
+    font-size: 20px;
+    color: #00aaff;
+    width: 20px;
+    /* Ensure equal width for all icons */
+    text-align: left;
+    /* Align text to the left */
+    margin-top: 3px;
+    /* Adjust vertical alignment */
+}
+
+.footer-item a {
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    max-width: 250px;
+    /* Prevents text from stretching too wide */
+}
+
+.footer-item a:hover {
+    color: #00ff99;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .footer-item {
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .footer-item i {
+        font-size: 18px;
+        width: 18px;
+    }
+}

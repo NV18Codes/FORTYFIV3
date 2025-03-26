@@ -217,102 +217,6 @@
             </div>
         </div>
     </div>
-    <!-- <style>
-        /* Restrict styles to .fact section only */
-        .fact {
-            padding: 50px 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        /* Ensuring the container keeps all cards in the same row */
-        .fact .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Ensuring all cards stay in one row */
-        .fact .row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: nowrap;
-            /* Prevents wrapping */
-            gap: 20px;
-        }
-
-        /* Fact Card Styles */
-        .fact-item {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 250px;
-            /* Fixed width for uniformity */
-            height: 320px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        /* Hover Effects */
-        .fact-item:hover {
-            transform: translateY(-10px) scale(1.05);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Icon Image */
-        .fact-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        /* Rotate Image on Hover */
-        .fact-item:hover img {
-            transform: rotateY(360deg);
-        }
-
-        /* Heading */
-        .fact-item h2 {
-            font-size: 20px;
-            color: #2D68F0;
-            margin-top: 15px;
-            font-weight: bold;
-        }
-
-        /* Paragraph */
-        .fact-item p {
-            font-size: 14px;
-            color: #555;
-            margin-top: 10px;
-            line-height: 1.6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .fact .row {
-                flex-wrap: wrap;
-                /* Cards will wrap only on small screens */
-                justify-content: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .fact .row {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style> -->
-    <!-- Fact End -->
-    <!-- About Section Start -->
     <div class="about">
         <div class="container">
             <div class="row align-items-center">
@@ -321,14 +225,16 @@
                     <div class="about-img">
                         <div class="feature-img">
                             <img src="https://cdn.pixabay.com/photo/2020/01/25/05/49/computer-4791835_1280.jpg"
-                                alt="Innovation & Experience" height="350" width="600">
+                                style="box-shadow: 0 4px 8px rgb(1, 0, 3);" alt="Innovation & Experience" height="350"
+                                width="600">
                         </div>
                     </div>
                 </div>
+
                 <!-- Text Section -->
                 <div class="col-md-6">
                     <div class="section-header">
-                        <p class="about-subtitle">ABOUT US</p>
+                        <!-- <p class="about-subtitle">ABOUT US</p> -->
                         <h2>Empowering Digital Transformation</h2>
                     </div>
                     <div class="about-text">
@@ -429,7 +335,7 @@
     <div class="service">
         <div class="container">
             <div class="section-header">
-                <p>Our Expertise</p>
+                <!-- <p>Our Expertise</p> -->
                 <h2>Innovative IT & Digital Solutions</h2>
             </div>
             <!-- <style>
@@ -537,88 +443,6 @@
     </div>
     <!-- Service End -->
 
-
-
-    <!-- <style>
-        .feature {
-            background: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        .feature-img img {
-            max-width: 100%;
-            animation: fadeInLeft 1s ease-in-out;
-        }
-
-        .feature-content {
-            padding: 20px;
-        }
-
-        .feature-content p {
-            font-size: 18px;
-            color: #444;
-            margin-bottom: 20px;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            font-size: 18px;
-            font-weight: 500;
-            padding: 12px 0;
-            position: relative;
-            opacity: 0;
-            transform: translateX(-30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .feature-list li::before {
-            content: "✔";
-            color: #28a745;
-            font-size: 20px;
-            margin-right: 10px;
-        }
-
-        .feature .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: bold;
-            background: #28a745;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-
-        .feature .btn:hover {
-            background: #218838;
-            transform: scale(1.05);
-        }
-
-        /* Scroll animation */
-        .feature-content.visible li {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-    </style> -->
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let featureSection = document.querySelector(".feature-content");
@@ -638,33 +462,43 @@
     </script>
 
     <!-- Feature Start -->
-    <div class="feature">
+    <div class="about">
         <div class="container">
             <div class="row align-items-center">
+                <!-- Image Section -->
                 <div class="col-md-6">
-                    <div class="feature-img">
-                        <img src="img\consulting-website-template.jpg" alt="Why Choose Us" height="500" width="700" style="border-radius: 50px;">
+                    <div class="about-img">
+                        <div class="feature-img">
+                            <img src="img/consulting-website-template.jpg" style="box-shadow: 0 4px 8px rgb(1, 0, 3);"
+                                alt="Innovation & Experience" height="350" width="600">
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-6">
                     <div class="section-header">
-                        <p class="about-subtitle">  WHY CHOOSE FORTYFIV3?</p>
+                        <!-- <p class="about-subtitle"> WHY CHOOSE FORTYFIV3?</p> -->
                         <h2>Our Strengths & Expertise</h2>
                     </div>
                     <div class="feature-content">
-                        <p>At <strong>FORTYFIV3</strong>, we drive digital transformation through innovation, expertise,
+                        <p>At <strong>FORTYFIV3</strong>, we drive digital transformation through
+                            innovation, expertise,
                             and technology.</p>
                         <ul class="feature-list">
-                            <li><strong>Innovative Solutions:</strong> We leverage cutting-edge technologies to deliver
+                            <li><strong>Innovative Solutions:</strong> We leverage cutting-edge technologies
+                                to deliver
                                 tailored solutions.</li>
-                            <li><strong>Experienced Team:</strong> Our professionals bring deep industry expertise and
+                            <li><strong>Experienced Team:</strong> Our professionals bring deep industry
+                                expertise and
                                 technical skills.</li>
-                            <li><strong>Customer-Centric Approach:</strong> We align our solutions with business goals
+                            <li><strong>Customer-Centric Approach:</strong> We align our solutions with
+                                business goals
                                 for maximum impact.</li>
-                            <li><strong>Proven Success:</strong> Our track record includes multiple successful
+                            <li><strong>Proven Success:</strong> Our track record includes multiple
+                                successful
                                 implementations across industries.</li>
-                            <li><strong>Competitive Pricing:</strong> We provide high-quality services without
+                            <li><strong>Competitive Pricing:</strong> We provide high-quality services
+                                without
                                 compromising affordability.</li>
                         </ul>
                         <!-- <a class="btn" href="about.html">Learn More</a> -->
@@ -740,149 +574,14 @@
             });
         });
     </script>
-    <!-- <style>
-        .clients {
-            text-align: center;
-            padding: 60px 0;
-            background-color: #f8f9fa;
-            /* Light background */
-        }
 
-        .section-header h2 {
-            font-size: 28px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .section-header p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .client-item {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .client-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 120px;
-        }
-
-        .client-card:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .client-card img {
-            max-width: 120px;
-            max-height: 100px;
-            object-fit: contain;
-        }
-
-        @media (max-width: 768px) {
-            .client-card {
-                height: 100px;
-            }
-
-            .client-card img {
-                max-width: 100px;
-            }
-        }
-    </style> -->
-    <!-- CTA Section Start -->
-    <!-- <style>
-        .cta-container {
-            background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 30px;
-            width: 90%;
-            max-width: 800px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ddd;
-            text-align: center;
-            margin: 50px auto;
-            /* Centers the CTA container horizontally */
-            position: relative;
-        }
-
-        /* Ensures the text remains properly aligned */
-        .cta-text {
-            max-width: 500px;
-            text-align: left;
-        }
-
-        .cta-text h2 {
-            font-size: 24px;
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .cta-text p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* CTA Button */
-        .cta-button {
-            background: #2D68F0;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s ease-in-out;
-            display: inline-block;
-            text-align: center;
-            white-space: nowrap;
-            /* Prevents button text from breaking */
-        }
-
-        .cta-button:hover {
-            background: #1E50C5;
-            transform: scale(1.05);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .cta-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-
-            .cta-text {
-                text-align: center;
-            }
-
-            .cta-button {
-                margin-top: 15px;
-                width: 100%;
-                max-width: 250px;
-            }
-        }
-    </style> -->
     <div class="cta-container">
         <div class="cta-text">
             <h2>Want to Start Your Next Project?</h2>
-            <p>We are here to help! Contact our experts today and let's build something amazing together.</p>
+            <p>We are here to help! Contact our experts today and let's build something amazing together.
+            </p>
         </div>
-        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto">  +27 693570429</i>
+        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
         </a>
     </div>
     <!-- CTA Section End -->
@@ -948,71 +647,27 @@
                     </div>
                 </div>
 
-                <style>
-                    .footer-link {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 15px;
-                    }
-
-                    .footer-item {
-                        display: flex;
-                        align-items: flex-start;
-                        /* Align items to the top */
-                        gap: 12px;
-                    }
-
-                    .footer-item i {
-                        font-size: 20px;
-                        color: #00aaff;
-                        width: 20px;
-                        /* Ensure equal width for all icons */
-                        text-align: left;
-                        /* Align text to the left */
-                        margin-top: 3px;
-                        /* Adjust vertical alignment */
-                    }
-
-                    .footer-item a {
-                        font-size: 16px;
-                        color: #ffffff;
-                        text-decoration: none;
-                        transition: color 0.3s ease-in-out;
-                        display: inline-block;
-                        max-width: 250px;
-                        /* Prevents text from stretching too wide */
-                    }
-
-                    .footer-item a:hover {
-                        color: #00ff99;
-                    }
-
-                    /* Responsive for Mobile */
-                    @media (max-width: 768px) {
-                        .footer-item {
-                            flex-direction: row;
-                            align-items: center;
-                            font-size: 14px;
-                        }
-
-                        .footer-item i {
-                            font-size: 18px;
-                            width: 18px;
-                        }
-                    }
-                </style>
 
                 <div class="container copyright">
                     <div class="row">
-                        <div class="col-12">
-                            <p class="text-center">
-                                &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
-                                    rel="noopener noreferrer">FORTYFIV3</a>
+                        <div class="col-12 d-flex justify-content-center align-items-center flex-wrap">
+                            <p class="m-0 text-center">
+                                &copy; Copyright 2025 | Powered by
+                                <a href="index.html" target="_blank" rel="noopener noreferrer"
+                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                    FORTYFIV3
+                                </a> |
+                                <a href="Privacy Policy.pdf" target="_blank" rel="noopener noreferrer"
+                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                    Privacy Policy
+                                </a>
                             </p>
-
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 

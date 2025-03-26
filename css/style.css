@@ -67,11 +67,7 @@ a:focus {
     color: #0796fe;
 }
 
-@media (min-width: 992px) {
-    .mt-125 {
-        margin-top: 125px;
-    }
-}
+
 
 
 /**********************************/
@@ -221,7 +217,7 @@ a:focus {
     .navbar {
         position: absolute;
         width: 100%;
-        top: 35px;
+        top: 1px;
         padding: 20px 60px;
         background: rgba(9, 42, 73, .2) !important;
         z-index: 9;
