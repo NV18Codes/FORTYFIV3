@@ -109,15 +109,16 @@
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <div class="section-header text-left"> <!-- Ensure text aligns left -->
-                        <p>Services</p>
-                        <h2 style="color: #ffffff;">Welcome to FORTYFIV3</h2>
+                        <br><br><br>
+                        <h1 style="color: #ffffff; align-self: center;text-align: center;">Services</h1>
+                        <div class="about-text text-left"> <!-- Align text to the left -->
+                            <h3 style="color: #ffffff; text-align: center;">
+                                Empowering businesses with cutting-edge solutions.
+                                <br>Bridging the gap between technology and strategy for sustainable growth.
+                            </h3>
+                        </div>
                     </div>
-                    <div class="about-text text-left"> <!-- Align text to the left -->
-                        <p>
-                            Empowering businesses with cutting-edge solutions.
-                            <br>Bridging the gap between technology and strategy for sustainable growth.
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -128,6 +129,8 @@
             position: relative;
             padding: 80px 0;
             color: #ffffff;
+            /* margin-top: 70px; */
+            /* Ensure it doesn't overlap with fixed navbar */
         }
 
         .about::before {
@@ -136,8 +139,9 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%;
-            background-image: url('serviceimg12.png');
+            height: 80vh;
+            /* Reduced height to avoid overlap */
+            background-image: url('WhatsApp Image 2025-03-27 at 00.57.20_92bb9a43.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -153,16 +157,25 @@
             font-size: large;
             text-align: left;
             font-style: oblique;
-            /* Ensure text is aligned left */
         }
 
         .section-header p,
         .section-header h2 {
             text-align: left;
-            /* Ensure heading aligns left */
+        }
+
+        /* Add some margin to separate from the next section */
+        .help-section {
+            margin-top: 40px;
+            /* Add space between sections */
         }
 
         @media (max-width: 768px) {
+            .about::before {
+                height: 50vh;
+                /* Smaller height for mobile */
+            }
+
             .about-text {
                 padding: 15px;
             }
@@ -172,77 +185,86 @@
             }
         }
     </style>
+    <br><br><br><br>
+    <section class="help-section">
+        <div class="container py-6">
+            <h1 class="text-center my-4">HOW CAN WE HELP YOU?</h1>
+            <p class="text-center mb-5">Let us know your business challenges, goals, or transformation needs</p>
 
-    <h1 class="text-center"><br>HOW CAN WE HELP YOU?</h1>
-    <p class="text-center">Let us know your business challenges, goals, or transformation needs</p><br>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img class="mb-3" src="img/icon-1.png" alt="Digital Transformation Services">
-                <h3>Digital Transformation</h3>
-                <p>Revolutionize your business with innovative digital adoption strategies for sustained growth.
-                </p>
-                <!-- <a href="">Read More</a> -->
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img class="mb-3" src="img/icon-1.png" alt="Digital Transformation Services">
+                        <h3>Digital Transformation</h3>
+                        <p>Revolutionize your business with innovative digital adoption strategies for sustained growth.
+                        </p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img class="mb-3" src="img/icon-2.png" alt="Custom Software Development">
+                        <h3>Custom Development</h3>
+                        <p>Build scalable, high-performance applications tailored to your unique business requirements.
+                        </p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img src="img/icon-3.png" class="mb-3" alt="Strategy and IT Consulting">
+                        <h3>Strategy & Consulting</h3>
+                        <p>Leverage expert advisory services to strengthen operations and drive business excellence.</p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img class="mb-3" src="img/icon-4.png" alt="eCommerce Development Solutions">
+                        <h3>eCommerce Development</h3>
+                        <p>Maximize online sales with tailored B2B and B2C eCommerce solutions that perform.</p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img class="mb-3" src="img/icon-5.png" alt="Software Testing and QA Services">
+                        <h3>Testing Services</h3>
+                        <p>Ensure flawless performance and security with advanced quality engineering solutions.</p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-item text-center p-4 shadow-lg rounded">
+                        <img class="mb-3" src="img/icon-6.png" alt="Technical Support Services">
+                        <h3>Tech Support</h3>
+                        <p>Get 24/7 expert support and proactive maintenance to keep your systems running smoothly
+                            without disruptions</p>
+                        <!-- <a href="">Read More</a> -->
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img class="mb-3" src="img/icon-2.png" alt="Custom Software Development">
-                <h3>Custom Development</h3>
-                <p>Build scalable, high-performance applications tailored to your unique business requirements.
-                </p>
-                <!-- <a href="">Read More</a> -->
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img src="img/icon-3.png" alt="Strategy and IT Consulting">
-                <h3>Strategy & Consulting</h3>
-                <p>Leverage expert advisory services to strengthen operations and drive business excellence.</p>
-                <!-- <a href="">Read More</a> -->
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img class="mb-3" src="img/icon-4.png" alt="eCommerce Development Solutions">
-                <h3>eCommerce Development</h3>
-                <p>Maximize online sales with tailored B2B and B2C eCommerce solutions that perform.</p>
-                <!-- <a href="">Read More</a> -->
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img class="mb-3" src="img/icon-5.png" alt="Software Testing and QA Services">
-                <h3>Testing Services</h3>
-                <p>Ensure flawless performance and security with advanced quality engineering solutions.</p>
-                <!-- <a href="">Read More</a> -->
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-4">
-            <div class="service-item text-center p-4 shadow-lg rounded">
-                <img class="mb-3" src="img/icon-6.png" alt="Technical Support Services">
-                <h3>Tech Support</h3>
-                <p>Get 24/7 expert support and proactive maintenance to keep your systems running smoothly
-                    without disruptions</p>
-                <!-- <a href="">Read More</a> -->
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+    </section>
+
+    <!-- Testimonial Start -->
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- Testimonial Start -->
     <div class="testimonial">
         <div class="container">
             <div class="section-header">
-                <h1 class="text-center">CLIENT TESTIMONIALS</h1><br>
+                <h1 class="text-center">CLIENT TESTIMONIALS</h1>
             </div>
 
-            <div class="testimonial-list">
+            <!-- Owl Carousel Wrapper -->
+            <div class="testimonial-carousel owl-carousel">
                 <!-- First Testimonial -->
                 <div class="testimonial-item">
-                    <p><br>
-                        "FORTYFIV3 is a valued service provider for SHAKA INDUSTRIES, and their experience in AI/ML,
+                    <p>"FORTYFIV3 is a valued service provider for SHAKA INDUSTRIES, and their experience in AI/ML,
                         Custom App Development is exceptional."
                     </p>
                     <h2>Peggy Pillay</h2>
@@ -252,25 +274,31 @@
 
                 <!-- Second Testimonial -->
                 <div class="testimonial-item">
-                    <p>
-                        <br>"FORTYFIV3’s quality of service, reliability, expertise, and knowledge of cloud-based
-                        solutions
-                        is excellent."
+                    <p>"FORTYFIV3’s quality of service, reliability, expertise, and knowledge of cloud-based
+                        solutions is excellent."
                     </p>
                     <h2>Hannes Gouws</h2>
                     <h3>Director</h3>
                     <div class="rating">★★★★★</div>
                 </div>
             </div>
+
+            <!-- Custom Navigation Buttons Below -->
+            <div class="testimonial-nav">
+                <button class="custom-prev">❮</button>
+                <button class="custom-next">❯</button>
+            </div>
         </div>
     </div>
 
-    <!-- Elegant CSS for testimonials -->
+    <!-- Elegant CSS for Testimonials -->
     <style>
         /* Overall container styling */
         .testimonial {
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             padding: 60px 20px;
+            position: relative;
+            text-align: center;
         }
 
         .section-header h1 {
@@ -280,17 +308,16 @@
             text-transform: uppercase;
         }
 
-        /* Testimonial list layout */
-        .testimonial-list {
+        /* Testimonial carousel container */
+        .testimonial-carousel {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
         /* Individual testimonial card */
         .testimonial-item {
-            max-width: 450px;
+            max-width: 600px;
             width: 100%;
             padding: 25px;
             text-align: center;
@@ -299,10 +326,10 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
             align-items: center;
-            text-align: center;
+            margin: auto;
         }
 
-        /* Hover effect for a dynamic feel */
+        /* Hover effect */
         .testimonial-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
@@ -314,14 +341,16 @@
             color: #555;
             line-height: 1.6;
             font-style: italic;
+            align-self: center;
+
         }
 
         /* Name styling */
         .testimonial-item h2 {
-            /* margin-top: 15px; */
             font-size: 22px;
             color: #003366;
             font-weight: bold;
+            text-align: center;
             align-self: center;
         }
 
@@ -331,8 +360,8 @@
             color: #777;
             font-weight: 500;
             margin-bottom: 10px;
+            text-align: center;
             align-self: center;
-
         }
 
         /* Star Rating */
@@ -340,18 +369,79 @@
             font-size: 22px;
             color: #f4c430;
             letter-spacing: 2px;
+            text-align: center;
+            /* Center align */
+            display: flex;
+            justify-content: center;
             align-self: center;
-
         }
 
-        /* Responsive for mobile screens */
+
+        /* Custom Navigation Buttons Below */
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .custom-prev,
+        .custom-next {
+            background: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .custom-prev:hover,
+        .custom-next:hover {
+            background: rgba(24, 8, 90, 0.979);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .testimonial-list {
-                flex-direction: column;
-                align-items: center;
+
+            .custom-prev,
+            .custom-next {
+                padding: 8px 12px;
+                font-size: 20px;
             }
         }
     </style>
+
+    <!-- Include Owl Carousel and jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- Owl Carousel Activation -->
+    <script>
+        $(document).ready(function () {
+            $(".testimonial-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                items: 1, // Show only one item at a time
+            });
+
+            // Custom navigation
+            $(".custom-prev").click(function () {
+                $(".testimonial-carousel").trigger("prev.owl.carousel");
+            });
+
+            $(".custom-next").click(function () {
+                $(".testimonial-carousel").trigger("next.owl.carousel");
+            });
+        });
+    </script>
+
 
 
     <!--Testimonial End -->
@@ -568,12 +658,20 @@
 
                 <div class="container copyright">
                     <div class="row">
-                        <div class="col-12">
-                            <p class="text-center">
-                                &copy; Copyright 2025 | Powered by <a href="#" target="_blank"
-                                    rel="noopener noreferrer">FORTYFIV3</a>
+                        <div class="col-12 d-flex justify-content-center align-items-center flex-wrap">
+                            <p class="m-0 text-center">
+                                &copy; Copyright 2025 | Powered by
+                                <a href="index.html" target="_blank" rel="noopener noreferrer"
+                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                    FORTYFIV3
+                                </a> |
+                                <a href="Privacy Policy.pdf" target="_blank" rel="noopener noreferrer"
+                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                    Privacy Policy
+                                </a>
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -589,6 +687,10 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
+
+        <!-- jQuery and Owl Carousel JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
