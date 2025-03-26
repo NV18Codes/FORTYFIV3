@@ -323,8 +323,9 @@
                 <div class="col-md-6">
                     <div class="section-header">
                         <!-- <p>Our Feature</p> -->
-                        <h2>Why Choose Us?</h2>
+                        <!-- <h2>Why Choose Us?</h2> -->
                     </div>
+                    <h2 style="text-align: center; font-size: 50px;">Why Choose Us?</h2>
                     <p>
                         For us, trust is the foundation of a successful and long-lasting relationship. So we do
                         everything it takes to build it.
@@ -497,7 +498,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 170, 255, 0.75);
+            background: rgba(0, 195, 255, 0.75);
             color: white;
             display: flex;
             align-items: center;
@@ -512,13 +513,91 @@
         }
 
         .process-item:hover .hover-overlay {
-            opacity: 1;
+            opacity: 0.9;
         }
     </style>
 
 
     <!-- CTA Section Start -->
     <style>
+        .cta-container {
+            background: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            width: 90%;
+            max-width: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            text-align: center;
+            margin: 50px auto;
+            /* Ensures text inside is aligned */
+        }
+
+
+        .cta-text {
+            max-width: 500px;
+        }
+
+        .cta-text h2 {
+            font-size: 24px;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cta-text p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            background: #2D68F0;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+            display: inline-block;
+            text-align: center;
+            font-family: Arial, sans-serif;;
+
+        }
+
+        .cta-button:hover {
+            background: #1E50C5;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cta-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .cta-button {
+                margin-top: 15px;
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="cta-container">
+        <div class="cta-text">
+            <h2>Want to Start Your Next Project?</h2>
+            <p>We are here to help! Contact our experts today and let's build something amazing together.</p>
+        </div>
+        <a href="tel:+27693570429" class="cta-button">
+            <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
+        </a>
+    </div>
+    <!-- <style>
         .cta-container {
             background: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -593,7 +672,7 @@
         </div>
         <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
         </a>
-    </div>
+    </div> -->
     <!-- CTA Section End -->
     <!-- contact end -->
 
