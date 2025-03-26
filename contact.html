@@ -122,25 +122,50 @@
 <body class="page">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <!-- Nav Bar Start -->
+    <div class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-            <a href="index.html" class="navbar-brand">
-                <img src="45 FINAL.png" alt="Logo" height="50" width="50">
+            <img src="45 FINAL.png" alt="Logo" height="50" width="50" class="logo">
+
+            <a href="index.html" class="navbar-brand brand-text">
+                <!-- <h4 style="color: white; font-style: italic;">FORTYFIV3</h4> -->
             </a>
+
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                <div class="navbar-nav">
+
+            <style>
+                @media (max-width: 768px) {
+                    .brand-text {
+                        display: none;
+                        /* Hide text on small screens */
+                    }
+                }
+            </style>
+
+
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav ml-auto">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
+                    <!-- <a href="feature.html" class="nav-item nav-link">Feature</a>
+                        <a href="advisor.html" class="nav-item nav-link">Advisor</a>
+                        <a href="review.html" class="nav-item nav-link">Review</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="blog.html" class="dropdown-item">Blog Page</a>
+                                <a href="single.html" class="dropdown-item">Single Page</a>
+                            </div>
+                        </div> -->
                     <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                 </div>
             </div>
         </div>
-    </nav>
-
+    </div>
+    <!-- Nav Bar End -->
     <!-- Page Header -->
     <div class="contact-header">
         <h1 style="color: #20b7c2;">Contact Us</h1>
