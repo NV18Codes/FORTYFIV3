@@ -229,7 +229,7 @@
 }
 
 .service-content li::before {
-    content: "✔";
+    content: "•";
     color: #2841a7;
     font-size: 20px;
     margin-right: 10px;
@@ -324,8 +324,8 @@
 }
 
 .feature-list li::before {
-    content: "✔";
-    color: #28a745;
+    content: "•";
+    color: #2841a7;
     font-size: 20px;
     margin-right: 10px;
 }
