@@ -104,88 +104,100 @@
     </div>
     <!-- Nav Bar End -->
     <!-- About Start -->
-    <div class="about mt-125">
+    <div class="about mt-125">  
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="section-header text-left"> <!-- Ensure text aligns left -->
-                        <br><br><br>
-                        <h1 style="color: #ffffff; align-self: center;text-align: center;">Services</h1>
-                        <div class="about-text text-left"> <!-- Align text to the left -->
-                            <h3 style="color: #ffffff; text-align: center;">
+                <div class="col-md-12"> 
+                    <div class="section-header"> 
+                        <h1 style="color: white;">Services</h1>
+                        <div class="about-text"> 
+                            <br>
+                            <h3>
                                 Empowering businesses with cutting-edge solutions.
                                 <br>Bridging the gap between technology and strategy for sustainable growth.
                             </h3>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+    
+    
 
-    <style>
+    <style> 
         .about {
             position: relative;
             padding: 80px 0;
             color: #ffffff;
-            /* margin-top: 70px; */
-            /* Ensure it doesn't overlap with fixed navbar */
+            display: flex;
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            text-align: left;
+            min-height: 120vh; /* Match image height */
         }
-
+    
         .about::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 80vh;
-            /* Reduced height to avoid overlap */
+            height: 120vh; /* Increased height */
             background-image: url('WhatsApp Image 2025-03-27 at 00.57.20_92bb9a43.jpg');
             background-size: cover;
             background-position: center;
             z-index: -1;
         }
-
-        .about-text {
-            font-size: 18px;
+    
+        .section-header {
+            max-width: 800px; /* Limit width for better readability */
+            width: 100%;
+            text-align: left;
+        }
+    
+        .section-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
             color: #ffffff;
-            font-weight: 500;
-            line-height: 1.8;
-            padding: 20px;
-            border-radius: 8px;
-            font-size: large;
-            text-align: left;
-            font-style: oblique;
+            text-align: left; /* Align to left */
+            position: relative;
         }
-
-        .section-header p,
-        .section-header h2 {
-            text-align: left;
+    
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            text-align: left; /* Align to left */
+            line-height: 1.6;
         }
-
-        /* Add some margin to separate from the next section */
-        .help-section {
-            margin-top: 40px;
-            /* Add space between sections */
-        }
-
+    
         @media (max-width: 768px) {
+            .about {
+                min-height: 80vh; /* Adjust height for mobile */
+                padding: 50px 20px;
+            }
+    
             .about::before {
-                height: 50vh;
-                /* Smaller height for mobile */
+                height: 80vh; /* Smaller height for mobile */
             }
-
-            .about-text {
-                padding: 15px;
+    
+            .section-header {
+                max-width: 90%;
             }
-
-            .section-header h2 {
+    
+            .section-header h1 {
                 font-size: 2rem;
+            }
+    
+            .about-text h3 {
+                font-size: 1.2rem;
             }
         }
     </style>
-    <br><br><br><br>
+    
+    
+    
+    <br><br>
     <section class="help-section">
         <div class="container py-6">
             <h1 class="text-center my-4">HOW CAN WE HELP YOU?</h1>
@@ -254,12 +266,12 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
     <!-- Testimonial Start -->
-    <div class="testimonial">
+    <div class="testimonial"> 
         <div class="container">
             <div class="section-header">
                 <h1 class="text-center">CLIENT TESTIMONIALS</h1>
             </div>
-
+    
             <!-- Owl Carousel Wrapper -->
             <div class="testimonial-carousel owl-carousel">
                 <!-- First Testimonial -->
@@ -271,7 +283,7 @@
                     <h3>Director</h3>
                     <div class="rating">★★★★★</div>
                 </div>
-
+    
                 <!-- Second Testimonial -->
                 <div class="testimonial-item">
                     <p>"FORTYFIV3’s quality of service, reliability, expertise, and knowledge of cloud-based
@@ -282,70 +294,60 @@
                     <div class="rating">★★★★★</div>
                 </div>
             </div>
-
-            <!-- Custom Navigation Buttons Below -->
+    
+            <!-- Custom Navigation Buttons -->
             <div class="testimonial-nav">
                 <button class="custom-prev">❮</button>
                 <button class="custom-next">❯</button>
             </div>
         </div>
     </div>
-
-    <!-- Elegant CSS for Testimonials -->
+    
+    <!-- Updated CSS -->
     <style>
-        /* Overall container styling */
+        /* Testimonial Section */
         .testimonial {
             background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
             padding: 60px 20px;
-            position: relative;
             text-align: center;
         }
-
+    
         .section-header h1 {
             font-size: 32px;
             font-weight: bold;
             color: #222;
             text-transform: uppercase;
         }
-
-        /* Testimonial carousel container */
+    
+        /* Carousel container */
         .testimonial-carousel {
             display: flex;
             justify-content: center;
             align-items: center;
         }
-
-        /* Individual testimonial card */
+    
+        /* Individual testimonial - Box removed */
         .testimonial-item {
             max-width: 600px;
             width: 100%;
-            padding: 25px;
+            padding: 0; /* Removed padding */
             text-align: center;
-            border-radius: 12px;
-            background: #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            align-items: center;
+            border-radius: 0; /* Removed border-radius */
+            background: none; /* Removed background */
+            box-shadow: none; /* Removed shadow */
+            transition: none; /* Removed hover effects */
             margin: auto;
         }
-
-        /* Hover effect */
-        .testimonial-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
+    
         /* Testimonial text */
         .testimonial-item p {
-            font-size: 16px;
+            font-size: 18px;
             color: #555;
             line-height: 1.6;
             font-style: italic;
-            align-self: center;
-
         }
-
-        /* Name styling */
+    
+        /* Name Styling */
         .testimonial-item h2 {
             font-size: 22px;
             color: #003366;
@@ -353,7 +355,7 @@
             text-align: center;
             align-self: center;
         }
-
+    
         /* Designation */
         .testimonial-item h3 {
             font-size: 16px;
@@ -363,28 +365,25 @@
             text-align: center;
             align-self: center;
         }
-
+    
         /* Star Rating */
         .rating {
             font-size: 22px;
             color: #f4c430;
             letter-spacing: 2px;
-            text-align: center;
-            /* Center align */
             display: flex;
             justify-content: center;
             align-self: center;
         }
-
-
-        /* Custom Navigation Buttons Below */
+    
+        /* Navigation Buttons */
         .testimonial-nav {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 20px;
         }
-
+    
         .custom-prev,
         .custom-next {
             background: #00aaff;
@@ -396,15 +395,14 @@
             border-radius: 50%;
             transition: 0.3s;
         }
-
+    
         .custom-prev:hover,
         .custom-next:hover {
             background: rgba(24, 8, 90, 0.979);
         }
-
+    
         /* Responsive */
         @media (max-width: 768px) {
-
             .custom-prev,
             .custom-next {
                 padding: 8px 12px;
@@ -412,11 +410,11 @@
             }
         }
     </style>
-
+    
     <!-- Include Owl Carousel and jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
+    
     <!-- Owl Carousel Activation -->
     <script>
         $(document).ready(function () {
@@ -430,17 +428,18 @@
                 autoplayHoverPause: true,
                 items: 1, // Show only one item at a time
             });
-
+    
             // Custom navigation
             $(".custom-prev").click(function () {
                 $(".testimonial-carousel").trigger("prev.owl.carousel");
             });
-
+    
             $(".custom-next").click(function () {
                 $(".testimonial-carousel").trigger("next.owl.carousel");
             });
         });
     </script>
+    
 
 
 
