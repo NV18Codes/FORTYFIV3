@@ -156,39 +156,7 @@
     </div>
     <!-- Video Modal End -->
 
-
     <!-- Fact Start -->
-    <!-- <style>
-        .fact-item {
-            background: #f8f9fa;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            height: 250px;
-            /* Fixed height for uniformity */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .fact-item img {
-            max-width: 60px;
-            margin-bottom: 10px;
-        }
-
-        .fact-item h2 {
-            font-size: 20px;
-            margin-bottom: 5px;
-        }
-
-        .fact-item p {
-            font-size: 14px;
-            color: #555;
-        }
-    </style> -->
-
     <div class="fact">
         <div class="container">
             <div class="row">
@@ -217,229 +185,154 @@
             </div>
         </div>
     </div>
-    <div class="about">
-        <div class="container">
-            <div class="row align-items-center">
+    <div class="about" style="padding: 60px 20px; background-color: #f9f9f9; text-align: center;">
+        <div class="container" style="max-width: 1200px; margin: auto;">
+            <div class="row" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center;">
                 <!-- Image Section -->
-                <div class="col-md-6">
+                <div class="col-md-6" style="flex: 1; max-width: 50%; padding: 15px;">
                     <div class="about-img">
                         <div class="feature-img">
                             <img src="https://cdn.pixabay.com/photo/2020/01/25/05/49/computer-4791835_1280.jpg"
-                                style="box-shadow: 0 4px 8px rgb(1, 0, 3);" alt="Innovation & Experience" height="350"
-                                width="600">
+                                style="width: 100%; height: auto; max-height: 350px; box-shadow: 0 4px 8px rgb(0, 0, 0); border-radius: 8px;"
+                                alt="Innovation & Experience">
                         </div>
                     </div>
                 </div>
 
                 <!-- Text Section -->
-                <div class="col-md-6">
+                <div class="col-md-6" style="flex: 1; max-width: 50%; padding: 15px; text-align: left;">
                     <div class="section-header">
-                        <!-- <p class="about-subtitle">ABOUT US</p> -->
-                        <h2>Empowering Digital Transformation</h2>
+                        <h3 style="font-size: 2rem; color: #333; margin-bottom: 15px; text-align: center;"
+                            class="responsive-heading">
+                            Empowering Digital Transformation
+                        </h3>
                     </div>
+
+                    <!-- Responsive CSS -->
+                    <style>
+                        @media (max-width: 768px) {
+                            .responsive-heading {
+                                font-size: 1.5rem;
+                                /* Reduce font size for tablets */
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            .responsive-heading {
+                                font-size: 1.2rem;
+                                /* Further reduce for mobile */
+                                margin-bottom: 10px;
+                                /* Adjust spacing */
+                            }
+                        }
+                    </style>
+
                     <div class="about-text">
-                        <p>
+                        <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 15px;">
                             At <b>FORTYFIV3</b>, we help businesses navigate their digital transformation with
                             cutting-edge technology solutions.
                             Our expertise ensures client satisfaction through timely delivery, professional excellence,
                             and competitive pricing.
                         </p>
-                        <p>
+                        <p style="font-size: 1rem; color: #555; line-height: 1.6; margin-bottom: 20px;">
                             Our mission is to <b>empower businesses with innovative technology solutions</b>, while our
                             vision is to be the <b>leading IT partner driving digital transformation worldwide</b>.
                             We specialize in <b>custom application development, strategy & consulting, AI/ML, IoT, and
                                 NLP</b>
                             to help businesses stay ahead in a competitive market.
                         </p>
-                        <a class="btn" href="about.html">Learn More</a>
+                        <a href="about.html"
+                            style="display: inline-block; padding: 10px 20px; font-size: 1rem; color: #fff; background-color: #007bff; border-radius: 5px; text-decoration: none; transition: 0.3s;">
+                            Learn More
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Responsive Inline CSS -->
+    <style>
+        @media (max-width: 768px) {
+            .about .row {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .col-md-6 {
+                max-width: 100% !important;
+            }
+
+            .about-text {
+                text-align: center;
+            }
+
+            .section-header {
+                text-align: start;
+            }
+        }
+    </style>
+
     <!-- About End -->
+    <hr>
 
-    <!-- <style>
-        /* About Section Styling */
-        .about {
-            padding: 80px 0;
-            background: #f9f9f9;
-        }
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let serviceSection = document.querySelector(".service-content");
+            let serviceItems = serviceSection.querySelectorAll("li");
 
-        .section-header {
-            text-align: left;
-            margin-bottom: 20px;
-        }
+            function revealOnScroll() {
+                let sectionPos = serviceSection.getBoundingClientRect().top;
+                let screenPos = window.innerHeight / 1.2;
 
-        .about-subtitle {
-            font-size: 14px;
-            color: #007bff;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .about h2 {
-            font-size: 32px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        /* Image Styling */
-        .about-img {
-            text-align: center;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .about-img img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .about-img img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Button Styling */
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            font-size: 16px;
-            font-weight: bold;
-            color: #fff;
-            background: #007bff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease-in-out;
-        }
-
-        .btn:hover {
-            background: #0056b3;
-        }
-    </style> -->
-
-
-
-    <!-- Service Start -->
-    <div class="service">
-        <div class="container">
-            <div class="section-header">
-                <!-- <p>Our Expertise</p> -->
-                <h2>Innovative IT & Digital Solutions</h2>
-            </div>
-            <!-- <style>
-                .service-content {
-                    background: #f8f9fa;
-                    padding: 30px;
-                    border-radius: 10px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+                if (sectionPos < screenPos) {
+                    serviceSection.classList.add("visible");
                 }
+            }
 
-                .service-content:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                }
+            window.addEventListener("scroll", revealOnScroll);
+        });
+    </script>
 
-                .service-content ul {
-                    list-style: none;
-                    padding: 0;
+    <div class="service-content">
+        <ul>
+            <li><strong>Custom Application Development:</strong> Build scalable, tailor-made applications for
+                your business needs.</li>
+            <li><strong>Digital Transformation:</strong> Modernize operations with cutting-edge digital adoption
+                strategies.</li>
+            <li><strong>Strategy & Consulting:</strong> Expert advisory to drive growth and efficiency across
+                industries.</li>
+            <li><strong>Digital Commerce:</strong> Seamless B2B & B2C commerce solutions for a competitive edge.
+            </li>
+            <li><strong>Data & Analytics:</strong> Transform data into actionable business intelligence.</li>
+            <li><strong>AI & Machine Learning:</strong> Enhance automation and decision-making with AI-driven
+                insights.</li>
+            <li><strong>IoT Solutions:</strong> Connect devices to create intelligent, efficient systems.</li>
+            <li><strong>Natural Language Processing (NLP):</strong> Revolutionize business communication with
+                advanced NLP.</li>
+        </ul>
+        <a class="btn responsive-btn" href="service.html">Learn More</a>
+
+        <!-- Responsive CSS -->
+        <style>
+            .responsive-btn {
+                display: block;
+                text-align: center;
+                width: fit-content;
+                margin: 10px auto 0;
+                /* Centers the button */
+            }
+
+            @media (min-width: 768px) {
+                .responsive-btn {
                     margin: 0;
+                    /* Resets margin for larger screens */
                 }
+            }
+        </style>
+    </div>
 
-                .service-content li {
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #333;
-                    padding: 12px 0;
-                    position: relative;
-                    opacity: 0;
-                    transform: translateX(-30px);
-                    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-                }
-
-                .service-content li::before {
-                    content: "✔";
-                    color: #2841a7;
-                    font-size: 20px;
-                    margin-right: 10px;
-                }
-
-                .service-content .btn {
-                    display: inline-block;
-                    margin-top: 15px;
-                    padding: 12px 25px;
-                    font-size: 18px;
-                    font-weight: bold;
-                    background: #2841a7;
-                    color: #fff;
-                    border-radius: 5px;
-                    text-decoration: none;
-                    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
-                }
-
-                .service-content .btn:hover {
-                    background: #2841a7;
-                    transform: scale(1.05);
-                }
-
-                /* Scroll animation */
-                .service-content.visible li {
-                    opacity: 1;
-                    transform: translateX(0);
-                }
-            </style> -->
-
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    let serviceSection = document.querySelector(".service-content");
-                    let serviceItems = serviceSection.querySelectorAll("li");
-
-                    function revealOnScroll() {
-                        let sectionPos = serviceSection.getBoundingClientRect().top;
-                        let screenPos = window.innerHeight / 1.2;
-
-                        if (sectionPos < screenPos) {
-                            serviceSection.classList.add("visible");
-                        }
-                    }
-
-                    window.addEventListener("scroll", revealOnScroll);
-                });
-            </script>
-
-            <div class="service-content">
-                <ul>
-                    <li><strong>Custom Application Development:</strong> Build scalable, tailor-made applications for
-                        your business needs.</li>
-                    <li><strong>Digital Transformation:</strong> Modernize operations with cutting-edge digital adoption
-                        strategies.</li>
-                    <li><strong>Strategy & Consulting:</strong> Expert advisory to drive growth and efficiency across
-                        industries.</li>
-                    <li><strong>Digital Commerce:</strong> Seamless B2B & B2C commerce solutions for a competitive edge.
-                    </li>
-                    <li><strong>Data & Analytics:</strong> Transform data into actionable business intelligence.</li>
-                    <li><strong>AI & Machine Learning:</strong> Enhance automation and decision-making with AI-driven
-                        insights.</li>
-                    <li><strong>IoT Solutions:</strong> Connect devices to create intelligent, efficient systems.</li>
-                    <li><strong>Natural Language Processing (NLP):</strong> Revolutionize business communication with
-                        advanced NLP.</li>
-                </ul>
-                <a class="btn" href="service.html">Learn More</a>
-            </div>
-
-        </div>
+    </div>
     </div>
     <!-- Service End -->
 
@@ -460,6 +353,7 @@
             window.addEventListener("scroll", revealOnScroll);
         });
     </script>
+    <hr>
 
     <!-- Feature Start -->
     <div class="about">
@@ -469,17 +363,39 @@
                 <div class="col-md-6">
                     <div class="about-img">
                         <div class="feature-img">
-                            <img src="img/consulting-website-template.jpg" style="box-shadow: 0 4px 8px rgb(1, 0, 3);"
-                                alt="Innovation & Experience" height="350" width="600">
+                            <img src="img/consulting-website-template.jpg"
+                                style="width: 100%; height: auto; max-height: 350px; box-shadow: 0 4px 8px rgb(0, 0, 0); border-radius: 8px;"
+                                alt="Innovation & Experience">
                         </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="section-header">
-                        <!-- <p class="about-subtitle"> WHY CHOOSE FORTYFIV3?</p> -->
-                        <h2>Our Strengths & Expertise</h2>
+                        <h3 style="font-size: 2rem; color: #333; margin-bottom: 15px; text-align: center;"
+                            class="responsive-heading">
+                            Our Strengths & Expertise
+                        </h3>
                     </div>
+
+                    <!-- Responsive CSS -->
+                    <style>
+                        @media (max-width: 768px) {
+                            .responsive-heading {
+                                font-size: 1.5rem;
+                                /* Adjust for tablets */
+                            }
+                        }
+
+                        @media (max-width: 480px) {
+                            .responsive-heading {
+                                font-size: 1.2rem;
+                                /* Adjust for mobile screens */
+                                margin-bottom: 10px;
+                            }
+                        }
+                    </style>
+
                     <div class="feature-content">
                         <p>At <strong>FORTYFIV3</strong>, we drive digital transformation through
                             innovation, expertise,
@@ -513,10 +429,11 @@
     <div id="Clients" class="clients">
         <div class="container">
             <div class="section-header">
-                <h2>Our Clients</h2>
-                <p>We enable clients to navigate their digital transformation. Join the elite group.</p>
+                <h2 style="text-align: center;">Our Clients</h2>
+                <p style="text-align: center;">We enable clients to navigate their digital transformation. Join the
+                    elite group.</p>
             </div>
-            <div class="owl-carousel clients-carousel">
+            <div class="owl-carousel clients-carousel" style="display: flex; justify-content: center;">
                 <div class="client-item">
                     <div class="client-card">
                         <img src="https://fortyfiv3.com/wp-content/uploads/2024/07/Shaka-Logo.png"
@@ -542,6 +459,7 @@
             </div>
         </div>
     </div>
+    <hr>
     <!-- Clients Section End -->
     <!-- Include jQuery and Owl Carousel -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -585,7 +503,6 @@
         </a>
     </div>
     <!-- CTA Section End -->
-
     <!-- Footer Start -->
     <div class="footer">
         <div class="container">
@@ -617,9 +534,22 @@
                         <a href="#">Projects</a>
                         <a href="#">Our Team</a>
                         <a href="#">Facts</a>
-                        <a href="#Clients" class="scroll-link">Clients</a>
+                        <a href="index.html#Clients" class="scroll-link">Clients</a>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        if (window.location.hash) {
+                            let target = document.querySelector(window.location.hash);
+                            if (target) {
+                                setTimeout(() => {
+                                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                                }, 300);
+                            }
+                        }
+                    });
+                </script>
+
                 <!-- Our Head Office -->
                 <div class="col-lg-3">
                     <div class="footer-link">

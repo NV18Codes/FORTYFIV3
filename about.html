@@ -20,11 +20,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 
 <body class="page">
@@ -316,7 +315,8 @@
             <div class="row align-items-end">
                 <div class="col-md-6">
                     <div class="feature-img">
-                        <img src="img/whychooseus.jpg" alt="Image" style="margin: 10px; border-radius: 20px;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);">
+                        <img src="img/whychooseus.jpg" alt="Image"
+                            style="margin: 10px; border-radius: 20px;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);">
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -564,88 +564,6 @@
             transition: 0.3s ease-in-out;
             display: inline-block;
             text-align: center;
-            font-family: Arial, sans-serif;;
-
-        }
-
-        .cta-button:hover {
-            background: #1E50C5;
-            transform: scale(1.05);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .cta-container {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-
-            .cta-button {
-                margin-top: 15px;
-                width: 100%;
-            }
-        }
-    </style>
-    <div class="cta-container">
-        <div class="cta-text">
-            <h2>Want to Start Your Next Project?</h2>
-            <p>We are here to help! Contact our experts today and let's build something amazing together.</p>
-        </div>
-        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto">  +27 693570429</i>
-        </a>
-    </div>
-    <style>
-        .cta-button{
-            font-size: small;
-        }
-    </style>
-    <!-- <style>
-        .cta-container {
-            background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            padding: 30px;
-            width: 90%;
-            max-width: 800px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid #ddd;
-            text-align: center;
-            margin: 50px auto;
-            /* Ensures text inside is aligned */
-        }
-
-
-        .cta-text {
-            max-width: 500px;
-        }
-
-        .cta-text h2 {
-            font-size: 24px;
-            color: #333;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .cta-text p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .cta-button {
-            background: #2D68F0;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.3s ease-in-out;
-            display: inline-block;
-            text-align: center;
 
         }
 
@@ -675,8 +593,10 @@
         </div>
         <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
         </a>
-    </div> -->
+    </div>
     <!-- CTA Section End -->
+
+
     <!-- contact end -->
 
     <!-- Footer Start -->
@@ -710,9 +630,21 @@
                         <a href="#">Projects</a>
                         <a href="#">Our Team</a>
                         <a href="#">Facts</a>
-                        <a href="#Clients" class="scroll-link">Clients</a>
+                        <a href="index.html#Clients" class="scroll-link">Clients</a>
                     </div>
                 </div>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        if (window.location.hash) {
+                            let target = document.querySelector(window.location.hash);
+                            if (target) {
+                                setTimeout(() => {
+                                    target.scrollIntoView({ behavior: "smooth", block: "start" });
+                                }, 300);
+                            }
+                        }
+                    });
+                </script>
                 <!-- Our Head Office -->
                 <div class="col-lg-3">
                     <div class="footer-link">
