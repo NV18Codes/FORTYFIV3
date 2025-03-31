@@ -217,7 +217,7 @@ a:focus {
     .navbar {
         position: absolute;
         width: 100%;
-        top: 1px;
+        /* top: 1px; */
         padding: 20px 60px;
         background: rgba(9, 42, 73, .2) !important;
         z-index: 9;

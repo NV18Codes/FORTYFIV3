@@ -20,7 +20,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -306,11 +307,19 @@
 
             <!-- Custom Navigation Buttons -->
             <div class="testimonial-nav">
-                <button class="custom-prev">❮</button>
-                <button class="custom-next">❯</button>
+                <button class="custom-next fa6"><i class="fa-solid fa-arrow-left"></i></i></button>
+                <button class="custom-prev fa6"><i class="fa-solid fa-arrow-right"></i></i></button>
             </div>
         </div>
     </div>
+    <style>
+        .fa6 .fa {
+            font-family: 'Font Awesome 6 Free';
+        }
+        .fa5 .fa {
+            font-family: 'Font Awesome 5 Free';
+        }
+    </style>
 
     <!-- Updated CSS -->
     <style>
@@ -483,7 +492,7 @@
             justify-content: space-between;
             align-items: center;
             border: 1px solid #ddd;
-            text-align: center;
+            text-align: left;
             margin: 50px auto;
             /* Ensures text inside is aligned */
         }
@@ -542,9 +551,10 @@
     <div class="cta-container">
         <div class="cta-text">
             <h2>Want to Start Your Next Project?</h2>
-            <p>We are here to help! Contact our experts today and let's build something amazing together.</p>
+            <p>We are here to help! Contact our experts today and let's build something amazing together.
+            </p>
         </div>
-        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone-alt ml-auto"> +27 693570429</i>
+        <a href="tel:+27693570429" class="cta-button"> <i class="fa fa-phone"> +27 693570429</i>
         </a>
     </div>
     <!-- CTA Section End -->
