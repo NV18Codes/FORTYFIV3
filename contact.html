@@ -120,7 +120,6 @@
 
 <body class="page">
 
-    <!-- Navbar -->
     <!-- Nav Bar Start -->
     <div class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
@@ -130,55 +129,40 @@
                 <!-- <h4 style="color: white; font-style: italic;">FORTYFIV3</h4> -->
             </a>
 
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
+
             <style>
-                .navbar {
-                    position: sticky;
-                    top: 0;
-                    width: 100%;
-                    z-index: 1000;
-                }
+                @media (max-width: 991px) {
+                    .navbar-collapse {
+                        background-color: rgb(8, 8, 44)
+                        /* Set background for small screens */
+                        padding: 10px;
+                    }
 
-                /* Prevent Content Overlapping */
-                /* body {
-                padding-top: 80px; Adjust this based on navbar height
-            } */
-
-                /* Ensure dropdown works properly */
-                .navbar .dropdown-menu {
-                    position: absolute;
-                }
-
-                /* Responsive Fixes */
-                @media (max-width: 768px) {
-                    .brand-text {
-                        display: none;
+                    .navbar-nav {
+                        text-align: left;
                     }
                 }
             </style>
 
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav ml-auto">
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                <div class="navbar-nav">
                     <a href="index.html" class="nav-item nav-link">Home</a>
                     <a href="about.html" class="nav-item nav-link">About Us</a>
                     <a href="service.html" class="nav-item nav-link">Services</a>
-                    <!-- <a href="feature.html" class="nav-item nav-link">Feature</a>
-                        <a href="advisor.html" class="nav-item nav-link">Advisor</a>
-                        <a href="review.html" class="nav-item nav-link">Review</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu">
-                                <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                <a href="single.html" class="dropdown-item">Single Page</a>
-                            </div>
-                        </div> -->
                     <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Add Bootstrap and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Nav Bar End -->
     <!-- Page Header -->
     <div class="contact-header text-center">
@@ -221,7 +205,8 @@
                         </div>
                         <div class="col-9">
                             <p style="color: grey; margin-bottom: 5px; font-size: 18px;">Our Office</p>
-                            <p style="margin: 0;">Building 10,<br> Thornhill Office Park, Johannesburg,<br> South Africa.</p>
+                            <p style="margin: 0;">Building 10,<br> Thornhill Office Park, Johannesburg,<br> South
+                                Africa.</p>
                         </div>
                     </div>
                 </div>
@@ -301,7 +286,8 @@
                             <div class="col-md-12 mb-3">
                                 <input type="checkbox" id="privacyConsent" required>
                                 <label for="privacyConsent">By continuing, I acknowledge and consent to FORTYFIV3's <a
-                                        href="Privacy Policy.pdf" target="_blank" style="color: #007bff">Privacy Policy</a>.</label>
+                                        href="Privacy Policy.pdf" target="_blank" style="color: #007bff">Privacy
+                                        Policy</a>.</label>
                             </div>
                             <div class="col-md-12 d-flex justify-content-start">
                                 <button type="submit" class="btn btn-primary px-4 py-2">Submit</button>
