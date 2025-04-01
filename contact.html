@@ -239,9 +239,9 @@
             </div>
 
             <!-- Contact Form -->
+            <!-- Contact Form -->
             <div class="col-md-8 contact-form">
-                <div class="p-4 border rounded shadow-sm"
-                    style="background: url('your-image-path.jpg') center/cover no-repeat;">
+                <div class="p-4 border rounded shadow-sm" style="background: rgba(255, 255, 255, 0.8);">
                     <form id="contactForm">
                         <div class="form-row">
                             <div class="form-group col-md-6 mb-3">
@@ -270,7 +270,7 @@
                             </div>
                             <div class="form-group col-md-6 mb-3">
                                 <input type="tel" id="contact" name="contact" class="form-control" placeholder="Contact"
-                                    required>
+                                    pattern="[0-9]{10}" required>
                             </div>
                         </div>
                         <div class="form-group mb-3">
@@ -280,132 +280,148 @@
                         <div class="form-row align-items-center">
                             <div class="col-md-12 mb-3">
                                 <input type="checkbox" id="privacyConsent" required>
-                                <label for="privacyConsent">By continuing, I acknowledge and consent to FORTYFIV3's <a
+                                <label for="privacyConsent">By continuing, I acknowledge and consent to the <a
                                         href="Privacy Policy.pdf" target="_blank" style="color: #007bff">Privacy
                                         Policy</a>.</label>
                             </div>
                             <div class="col-md-12 d-flex justify-content-start">
                                 <button type="submit" class="btn btn-primary px-4 py-2">Submit</button>
                             </div>
-                        </div><br>
+                        </div>
                     </form>
                 </div>
             </div>
 
-        </div> <!-- End Row -->
-
-        <!-- Google Maps (Centered & Responsive) -->
-        <div class="row mt-4 justify-content-center">
-            <div class="col-12 d-flex justify-content-center">
-                <div class="map-container">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742919712242!5m2!1sen!2sin"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+            <!-- Google Maps (Centered & Responsive) -->
+            <div class="row mt-4 justify-content-center">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114584.91033155734!2d27.957622496615635!3d-26.171343973446014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sin!4v1742919712242!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
-
-    <!-- CSS for Responsiveness -->
-    <style>
-        /* Google Map */
-        .map-container {
-            position: relative;
-            width: 100%;
-            max-width: 1150px;
-            height: 450px;
-        }
-
-        .map-container iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        @media (max-width: 768px) {
+        <!-- CSS for Responsiveness -->
+        <style>
+            /* Google Map */
             .map-container {
-                height: 300px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .map-container {
-                height: 250px;
-            }
-        }
-
-        /* General Styling */
-        .contact-form {
-            padding: 30px;
-            border-radius: 10px;
-        }
-
-        .contact-info-box {
-            padding: 30px;
-        }
-
-        .contact-info-box .p-4 {
-            margin-bottom: 20px;
-        }
-
-        .contact-form .form-group {
-            margin-bottom: 20px;
-        }
-
-        /* Responsive Fixes */
-        @media (max-width: 768px) {
-
-            .col-md-4,
-            .col-md-8 {
-                padding: 15px;
+                position: relative;
+                width: 100%;
+                max-width: 1150px;
+                height: 450px;
             }
 
+            .map-container iframe {
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            @media (max-width: 768px) {
+                .map-container {
+                    height: 300px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .map-container {
+                    height: 250px;
+                }
+            }
+
+            /* General Styling */
             .contact-form {
-                margin-top: 20px;
-                padding: 20px;
+                padding: 30px;
+                border-radius: 10px;
             }
 
             .contact-info-box {
+                padding: 30px;
+            }
+
+            .contact-info-box .p-4 {
                 margin-bottom: 20px;
             }
 
             .contact-form .form-group {
-                margin-bottom: 15px;
-            }
-        }
-
-        /* Large Screen Fixes */
-        @media (min-width: 1024px) {
-            .col-md-4 {
-                padding-right: 40px;
+                margin-bottom: 20px;
             }
 
-            .contact-form {
-                padding: 40px;
+            /* Responsive Fixes */
+            @media (max-width: 768px) {
+
+                .col-md-4,
+                .col-md-8 {
+                    padding: 15px;
+                }
+
+                .contact-form {
+                    margin-top: 20px;
+                    padding: 20px;
+                }
+
+                .contact-info-box {
+                    margin-bottom: 20px;
+                }
+
+                .contact-form .form-group {
+                    margin-bottom: 15px;
+                }
             }
-        }
-    </style>
+
+            /* Large Screen Fixes */
+            @media (min-width: 1024px) {
+                .col-md-4 {
+                    padding-right: 40px;
+                }
+
+                .contact-form {
+                    padding: 40px;
+                }
+            }
+        </style>
 
 
 
-    <!-- Include EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <!-- Include EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            emailjs.init("J1oECn39yhgpO5cOW"); // Initialize EmailJS (Use your Public Key)
+        <!-- EmailJS Integration -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                emailjs.init("AoeCTVfxt_jkZ97ug"); // Ensure this is your public API key
+            });
+
+            function sendAutoReply(formData) {
+                const templateParams = {
+                    firstName: formData.firstName,
+                    lastName: formData.lastName,
+                    role: formData.role,
+                    company: formData.company,
+                    email: formData.email,
+                    contact: formData.contact,
+                    message: formData.message
+                };
+
+                emailjs.send("service_hqoedrp", "template_nmz195g", templateParams)
+                    .then(function (response) {
+                        console.log("Auto-reply sent successfully:", response.status, response.text);
+                        alert("Thank you for reaching out! We will get back to you soon.");
+                    })
+                    .catch(function (error) {
+                        console.error("Failed to send auto-reply:", error);
+                        alert("Oops! Something went wrong. Please try again later.");
+                    });
+            }
 
             document.getElementById("contactForm").addEventListener("submit", function (event) {
-                event.preventDefault(); // Prevent default form submission
-
-                // Show loading message
-                const submitButton = document.querySelector("#contactForm button[type='submit']");
-                submitButton.innerHTML = "Sending...";
-                submitButton.disabled = true;
-
-                // Get form data
+                event.preventDefault();
                 const formData = {
                     firstName: document.getElementById("firstName").value,
                     lastName: document.getElementById("lastName").value,
@@ -413,189 +429,166 @@
                     company: document.getElementById("company").value,
                     email: document.getElementById("email").value,
                     contact: document.getElementById("contact").value,
-                    message: document.getElementById("message").value
+                    message: document.getElementById("message").value,
                 };
 
-                // Send email using EmailJS
-                emailjs.send("service_yg5ecwf", "template_v88kuf5", formData, "J1oECn39yhgpO5cOW")
-                    .then(response => {
-                        console.log("EmailJS Response:", response);
+                if (!document.getElementById("privacyConsent").checked) {
+                    alert("Please agree to the Privacy Policy.");
+                    return;
+                }
 
-                        // Show success message
-                        const successMsg = document.createElement("p");
-                        successMsg.textContent = "✅ Message sent successfully!";
-                        successMsg.style.color = "green";
-                        document.getElementById("contactForm").appendChild(successMsg);
-
-                        // Reset form & reCAPTCHA
-                        document.getElementById("contactForm").reset();
-                        grecaptcha.reset();
-
-                        // Reset button
-                        submitButton.innerHTML = "Submit";
-                        submitButton.disabled = false;
-                    })
-                    .catch(error => {
-                        console.error("EmailJS Error:", error);
-
-                        // Show error message
-                        // alert(" Failed to send message. Check console for errors.");
-
-                        // Reset button
-                        submitButton.innerHTML = "Submit";
-                        submitButton.disabled = false;
-                    });
+                sendAutoReply(formData);
+                document.getElementById("contactForm").reset();
             });
-        });
-    </script>
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- Logo Section -->
-                <div class="col-lg-3">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="45 FINAL.png" alt="Logo" height="150" width="150">
-                        </a>
+        </script>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo Section -->
+                    <div class="col-lg-3">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="45 FINAL.png" alt="Logo" height="150" width="150">
+                            </a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Quick Links -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Quick Links</h2>
-                        <a href="index.html">Home</a>
-                        <a href="about.html">About Us</a>
-                        <a href="service.html">Services</a>
-                        <a href="contact.html">Contact Us</a>
+                    <!-- Quick Links -->
+                    <div class="col-lg-3">
+                        <div class="footer-link">
+                            <h2>Quick Links</h2>
+                            <a href="index.html">Home</a>
+                            <a href="about.html">About Us</a>
+                            <a href="service.html">Services</a>
+                            <a href="contact.html">Contact Us</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Business -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Business</h2>
-                        <a href="#">Projects</a>
-                        <a href="#">Our Team</a>
-                        <a href="#">Facts</a>
-                        <a href="index.html#Clients" class="scroll-link">Clients</a>
+                    <!-- Business -->
+                    <div class="col-lg-3">
+                        <div class="footer-link">
+                            <h2>Business</h2>
+                            <a href="#">Projects</a>
+                            <a href="#">Our Team</a>
+                            <a href="#">Facts</a>
+                            <a href="index.html#Clients" class="scroll-link">Clients</a>
+                        </div>
                     </div>
-                </div>
-                <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        if (window.location.hash) {
-                            let target = document.querySelector(window.location.hash);
-                            if (target) {
-                                setTimeout(() => {
-                                    target.scrollIntoView({ behavior: "smooth", block: "start" });
-                                }, 300);
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            if (window.location.hash) {
+                                let target = document.querySelector(window.location.hash);
+                                if (target) {
+                                    setTimeout(() => {
+                                        target.scrollIntoView({ behavior: "smooth", block: "start" });
+                                    }, 300);
+                                }
                             }
-                        }
-                    });
-                </script>
-                <!-- Our Head Office -->
-                <div class="col-lg-3">
-                    <div class="footer-link">
-                        <h2>Our Office</h2>
+                        });
+                    </script>
+                    <!-- Our Head Office -->
+                    <div class="col-lg-3">
+                        <div class="footer-link">
+                            <h2>Our Office</h2>
 
-                        <div class="footer-item">
-                            <i class="fa fa-map-marker-alt"></i>
-                            <span>
-                                <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Building 10, Thornhill Office Park, Johannesburg, South Africa
-                                </a>
-                            </span>
-                        </div>
+                            <div class="footer-item">
+                                <i class="fa fa-map-marker-alt"></i>
+                                <span>
+                                    <a href="https://maps.app.goo.gl/YrituVRJ4AzYF6nz5" target="_blank"
+                                        rel="noopener noreferrer">
+                                        Building 10, Thornhill Office Park, Johannesburg, South Africa
+                                    </a>
+                                </span>
+                            </div>
 
-                        <div class="footer-item">
-                            <i class="fa fa-phone-alt"></i>
-                            <span><a href="tel:+27693570429">+27 693570429</a></span>
-                        </div>
+                            <div class="footer-item">
+                                <i class="fa fa-phone-alt"></i>
+                                <span><a href="tel:+27693570429">+27 693570429</a></span>
+                            </div>
 
-                        <div class="footer-item">
-                            <i class="fa fa-envelope"></i>
-                            <span><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></span>
+                            <div class="footer-item">
+                                <i class="fa fa-envelope"></i>
+                                <span><a href="mailto:contact@fortyfiv3.com">contact@fortyfiv3.com</a></span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <style>
-                    .footer-link {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 15px;
-                    }
+                    <style>
+                        .footer-link {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 15px;
+                        }
 
-                    .footer-item {
-                        display: flex;
-                        align-items: flex-start;
-                        /* Align items to the top */
-                        gap: 12px;
-                    }
-
-                    .footer-item i {
-                        font-size: 20px;
-                        color: #00aaff;
-                        width: 20px;
-                        /* Ensure equal width for all icons */
-                        text-align: left;
-                        /* Align text to the left */
-                        margin-top: 3px;
-                        /* Adjust vertical alignment */
-                    }
-
-                    .footer-item a {
-                        font-size: 16px;
-                        color: #ffffff;
-                        text-decoration: none;
-                        transition: color 0.3s ease-in-out;
-                        display: inline-block;
-                        max-width: 250px;
-                        /* Prevents text from stretching too wide */
-                    }
-
-                    .footer-item a:hover {
-                        color: #00ff99;
-                    }
-
-                    /* Responsive for Mobile */
-                    @media (max-width: 768px) {
                         .footer-item {
-                            flex-direction: row;
-                            align-items: center;
-                            font-size: 14px;
+                            display: flex;
+                            align-items: flex-start;
+                            /* Align items to the top */
+                            gap: 12px;
                         }
 
                         .footer-item i {
-                            font-size: 18px;
-                            width: 18px;
+                            font-size: 20px;
+                            color: #00aaff;
+                            width: 20px;
+                            /* Ensure equal width for all icons */
+                            text-align: left;
+                            /* Align text to the left */
+                            margin-top: 3px;
+                            /* Adjust vertical alignment */
                         }
-                    }
-                </style>
 
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-12 d-flex justify-content-center align-items-center flex-wrap">
-                            <p class="m-0 text-center">
-                                &copy; Copyright 2025 | Powered by
-                                <a href="index.html" target="_blank" rel="noopener noreferrer"
-                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
-                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
-                                    FORTYFIV3
-                                </a> |
-                                <a href="Privacy Policy.pdf" target="_blank" rel="noopener noreferrer"
-                                    style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
-                                    onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
-                                    Privacy Policy
-                                </a>
-                            </p>
+                        .footer-item a {
+                            font-size: 16px;
+                            color: #ffffff;
+                            text-decoration: none;
+                            transition: color 0.3s ease-in-out;
+                            display: inline-block;
+                            max-width: 250px;
+                            /* Prevents text from stretching too wide */
+                        }
+
+                        .footer-item a:hover {
+                            color: #00ff99;
+                        }
+
+                        /* Responsive for Mobile */
+                        @media (max-width: 768px) {
+                            .footer-item {
+                                flex-direction: row;
+                                align-items: center;
+                                font-size: 14px;
+                            }
+
+                            .footer-item i {
+                                font-size: 18px;
+                                width: 18px;
+                            }
+                        }
+                    </style>
+
+                    <div class="container copyright">
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center align-items-center flex-wrap">
+                                <p class="m-0 text-center">
+                                    &copy; Copyright 2025 | Powered by
+                                    <a href="index.html" target="_blank" rel="noopener noreferrer"
+                                        style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                        onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                        FORTYFIV3
+                                    </a> |
+                                    <a href="Privacy Policy.pdf" target="_blank" rel="noopener noreferrer"
+                                        style="color: grey; text-decoration: none; transition: color 0.3s ease-in-out;"
+                                        onmouseover="this.style.color='#00aaff'" onmouseout="this.style.color='grey'">
+                                        Privacy Policy
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 </body>
 
 </html>
