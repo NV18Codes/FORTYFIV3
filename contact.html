@@ -138,8 +138,8 @@
                 @media (max-width: 991px) {
                     .navbar-collapse {
                         background-color: rgb(8, 8, 44)
-                        /* Set background for small screens */
-                        padding: 10px;
+                            /* Set background for small screens */
+                            padding: 10px;
                     }
 
                     .navbar-nav {
@@ -292,7 +292,7 @@
                             <div class="col-md-12 d-flex justify-content-start">
                                 <button type="submit" class="btn btn-primary px-4 py-2">Submit</button>
                             </div>
-                        </div>
+                        </div><br>
                     </form>
                 </div>
             </div>
@@ -394,41 +394,63 @@
     </style>
 
 
+
+    <!-- Include EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script>
-        (function () {
-            emailjs.init("J1oECn39yhgpO5cOW"); // Replace with your actual EmailJS User ID
-        })();
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("J1oECn39yhgpO5cOW"); // Initialize EmailJS (Use your Public Key)
 
-        document.getElementById("contactForm").addEventListener("submit", async function (event) {
-            event.preventDefault();
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
 
-            // Validate reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if (!recaptchaResponse) {
-                alert("Please complete the reCAPTCHA verification.");
-                return;
-            }
+                // Show loading message
+                const submitButton = document.querySelector("#contactForm button[type='submit']");
+                submitButton.innerHTML = "Sending...";
+                submitButton.disabled = true;
 
-            // Collect form data
-            const formData = {
-                firstName: document.getElementById("firstName").value,
-                lastName: document.getElementById("lastName").value,
-                role: document.getElementById("role").value,
-                company: document.getElementById("company").value,
-                email: document.getElementById("email").value,
-                contact: document.getElementById("contact").value,
-                message: document.getElementById("message").value
-            };
+                // Get form data
+                const formData = {
+                    firstName: document.getElementById("firstName").value,
+                    lastName: document.getElementById("lastName").value,
+                    role: document.getElementById("role").value,
+                    company: document.getElementById("company").value,
+                    email: document.getElementById("email").value,
+                    contact: document.getElementById("contact").value,
+                    message: document.getElementById("message").value
+                };
 
-            try {
-                const response = await emailjs.send("service_yg5ecwf", "template_v88kuf5", formData);
-                alert("Message sent successfully!");
-                document.getElementById("contactForm").reset();
-                grecaptcha.reset();
-            } catch (error) {
-                console.error("EmailJS Error:", error);
-                alert("Failed to send message. Please try again later.");
-            }
+                // Send email using EmailJS
+                emailjs.send("service_yg5ecwf", "template_v88kuf5", formData, "J1oECn39yhgpO5cOW")
+                    .then(response => {
+                        console.log("EmailJS Response:", response);
+
+                        // Show success message
+                        const successMsg = document.createElement("p");
+                        successMsg.textContent = "✅ Message sent successfully!";
+                        successMsg.style.color = "green";
+                        document.getElementById("contactForm").appendChild(successMsg);
+
+                        // Reset form & reCAPTCHA
+                        document.getElementById("contactForm").reset();
+                        grecaptcha.reset();
+
+                        // Reset button
+                        submitButton.innerHTML = "Submit";
+                        submitButton.disabled = false;
+                    })
+                    .catch(error => {
+                        console.error("EmailJS Error:", error);
+
+                        // Show error message
+                        // alert(" Failed to send message. Check console for errors.");
+
+                        // Reset button
+                        submitButton.innerHTML = "Submit";
+                        submitButton.disabled = false;
+                    });
+            });
         });
     </script>
     <!-- Footer Start -->
