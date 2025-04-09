@@ -370,19 +370,36 @@
     text-align: center;
     padding: 60px 0;
     background-color: #f8f9fa;
-    /* Light background */
+}
+
+.section-header {
+    margin-bottom: 40px;
 }
 
 .section-header h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 32px;
+    color: #092A49;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 .section-header p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 30px;
+    font-size: 17px;
+    color: #555;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 0 15px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.clients-carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 30px;
 }
 
 .client-item {
@@ -393,23 +410,24 @@
 
 .client-card {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
+    height: 140px;
+    width: 180px;
 }
 
 .client-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .client-card img {
-    max-width: 120px;
+    max-width: 100%;
     max-height: 100px;
     object-fit: contain;
 }
@@ -417,10 +435,20 @@
 @media (max-width: 768px) {
     .client-card {
         height: 100px;
+        width: 140px;
+        padding: 20px;
     }
 
     .client-card img {
         max-width: 100px;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+    }
+
+    .section-header p {
+        font-size: 15px;
     }
 }
 
